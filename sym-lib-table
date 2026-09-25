@@ -1,4 +1,7 @@
 (sym_lib_table
   (version 7)
-  (lib (name "MOSFET_My")(type "KiCad")(uri "${KIPRJMOD}/Lib/MOSFET_My.kicad_sym")(options "")(descr ""))
+  (lib (name "MOSFET_My")(type "KiCad")(uri "${KIPRJMOD}/Lib/MOSFET_My.kicad_sym")(options "")(descr "Силовые ключи проекта"))
+  (lib (name "Logic_My")(type "KiCad")(uri "${KIPRJMOD}/Lib/Logic_My.kicad_sym")(options "")(descr "Компараторы и логика"))
+  (lib (name "Novosense")(type "KiCad")(uri "${KIPRJMOD}/Lib/Novosense.kicad_sym")(options "")(descr "Драйверы Novosense"))
+  (lib (name "CAN_My")(type "KiCad")(uri "${KIPRJMOD}/Lib/CAN_My.kicad_sym")(options "")(descr "Приёмопередатчики CAN"))
 )
