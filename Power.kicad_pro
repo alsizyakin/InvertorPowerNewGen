@@ -776,7 +776,7 @@
         "uuid": "7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
       }
     ],
-    "used_designators": "C90,C92-96,#PWR163-164",
+    "used_designators": "#PWR50-51,#PWR93,#FLG1-10",
     "variants": []
   },
   "sheets": [
