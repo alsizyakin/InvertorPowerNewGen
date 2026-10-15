@@ -22383,6 +22383,7 @@
 		(property "Reference" "C103"
 			(at 0 -1.43 180)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "335297b8-b884-49d7-89d4-e97b8bbf4ca7")
 			(effects
 				(font
