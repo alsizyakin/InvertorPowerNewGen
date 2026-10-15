@@ -13,7 +13,7 @@ def place_and_route(G, ref, layer, win, conns, rots=(0, 90, 180, 270), step=0.1,
         while x <= x1 + 1e-9:
             y = y0
             while y <= y1 + 1e-9:
-                if not G.check(ref, x, y, rot, moved=moved, extra_vias=extra_vias, extra_segs=extra_segs):
+                if not G.check_fast(ref, x, y, rot, moved=moved, extra_vias=extra_vias, extra_segs=extra_segs):
                     pads, _ = f.placed(x, y, rot)
                     est = sum(math.hypot(p["x"] - conns[p["name"]][0], p["y"] - conns[p["name"]][1]) for p in pads if p["name"] in conns)
                     cands.append((est, (round(x, 3), round(y, 3), rot)))

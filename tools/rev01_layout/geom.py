@@ -193,3 +193,56 @@ def P(points, w, layer, net):
     return [dict(x1=a[0], y1=a[1], x2=b[0], y2=b[1], w=w, layer=layer, net=net) for a, b in zip(points, points[1:])]
 def V(x, y, net, size=0.6, d=0.3):
     return dict(x=x, y=y, net=net, size=size, d=d)
+
+# ---------------------------------------------------------------- fast spatially-filtered check
+def _bbox_of(pads, crt):
+    xs = [p["x"] - p["aw"]/2 for p in pads] + [p["x"] + p["aw"]/2 for p in pads]
+    ys = [p["y"] - p["ah"]/2 for p in pads] + [p["y"] + p["ah"]/2 for p in pads]
+    if crt: xs += [crt[0], crt[2]]; ys += [crt[1], crt[3]]
+    return (min(xs), min(ys), max(xs), max(ys))
+
+def _cache(self):
+    if getattr(self, "_pc", None) is None:
+        self._pc = {r: f.placed() for r, f in self.fps.items()}
+        self._bb = {r: _bbox_of(*v) for r, v in self._pc.items()}
+    return self._pc, self._bb
+
+def check_fast(self, ref, x, y, rot, moved=None, cl=0.2, extra_vias=(), extra_segs=(), shrink=0.25, margin=1.0):
+    moved = moved or {}
+    pc, bb = _cache(self)
+    f = self.fps[ref]; pads, crt = f.placed(x, y, rot); box = _bbox_of(pads, crt)
+    gx0, gy0, gx1, gy1 = box[0] - margin, box[1] - margin, box[2] + margin, box[3] + margin
+    out = []
+    def rect(p): return (p["x"]-p["aw"]/2, p["y"]-p["ah"]/2, p["x"]+p["aw"]/2, p["y"]+p["ah"]/2)
+    for r, o in self.fps.items():
+        if r == ref: continue
+        if r in moved:
+            opads, ocrt = o.placed(*moved[r]); obb = _bbox_of(opads, ocrt)
+        else:
+            (opads, ocrt), obb = pc[r], bb[r]
+        if obb[2] < gx0 or obb[0] > gx1 or obb[3] < gy0 or obb[1] > gy1: continue
+        if crt and ocrt and o.layer == f.layer:
+            a = (crt[0]+shrink, crt[1]+shrink, crt[2]-shrink, crt[3]-shrink); b = (ocrt[0]+shrink, ocrt[1]+shrink, ocrt[2]-shrink, ocrt[3]-shrink)
+            if min(a[2], b[2]) - max(a[0], b[0]) > 1e-6 and min(a[3], b[3]) - max(a[1], b[1]) > 1e-6: out.append(("body", r))
+        for p in pads:
+            pl = layers_of(p, f.layer)
+            for q in opads:
+                ql = layers_of(q, o.layer)
+                if pl != "ALL" and ql != "ALL" and not (pl & ql): continue
+                if p["net"] and p["net"] == q["net"]: continue
+                if d_rect_rect(rect(p), rect(q)) < cl - 1e-6: out.append(("pad", f"{ref}.{p['name']}", f"{r}.{q['name']}"))
+    for p in pads:
+        pl = layers_of(p, f.layer); rc = rect(p)
+        for v in list(self.vias) + list(extra_vias):
+            if not (gx0 <= v["x"] <= gx1 and gy0 <= v["y"] <= gy1): continue
+            if p["net"] and p["net"] == v["net"]: continue
+            if d_pt_rect(v["x"], v["y"], rc) - _via_r(v) < cl - 1e-6: out.append(("via", f"{ref}.{p['name']}", v["net"]))
+        for sg in list(self.segs) + list(extra_segs):
+            if max(sg["x1"], sg["x2"]) < gx0 or min(sg["x1"], sg["x2"]) > gx1 or max(sg["y1"], sg["y2"]) < gy0 or min(sg["y1"], sg["y2"]) > gy1: continue
+            if pl != "ALL" and sg["layer"] not in pl: continue
+            if p["net"] and p["net"] == sg["net"]: continue
+            if d_seg_rect(sg["x1"], sg["y1"], sg["x2"], sg["y2"], rc) - sg["w"]/2 < cl - 1e-6: out.append(("track", f"{ref}.{p['name']}", sg["net"]))
+        for e in self.edge:
+            if d_seg_rect(*e, rc) < 0.25: out.append(("edge", f"{ref}.{p['name']}"))
+    return out
+Board.check_fast = check_fast

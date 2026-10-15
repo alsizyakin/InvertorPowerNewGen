@@ -140,3 +140,24 @@ def _flip_fp(self, ref):
     head = blk[:head_end].replace('(layer "F.Cu")', '(layer "B.Cu")', 1)
     self.s = self.s[:a] + head + body + self.s[b:]
 Board.flip_fp = _flip_fp
+
+def _keepout(self, layer, pts, name="", pour=True, tracks=False, vias=False):
+    """Rule area on `layer`: by default forbids copper pour only."""
+    a = lambda b: "not_allowed" if b else "allowed"
+    xy = " ".join(f"(xy {fmt(x)} {fmt(y)})" for x, y in pts)
+    self.added_zones = getattr(self, "added_zones", [])
+    self.added_zones.append(
+        f'\t(zone\n\t\t(layer "{layer}")\n\t\t(uuid "{uuid.uuid4()}")\n\t\t(name "{name}")\n\t\t(hatch edge 0.5)\n'
+        f'\t\t(connect_pads\n\t\t\t(clearance 0)\n\t\t)\n\t\t(min_thickness 0.25)\n\t\t(filled_areas_thickness no)\n'
+        f'\t\t(keepout\n\t\t\t(tracks {a(tracks)})\n\t\t\t(vias {a(vias)})\n\t\t\t(pads allowed)\n\t\t\t(copperpour {a(pour)})\n'
+        f'\t\t\t(footprints allowed)\n\t\t)\n\t\t(placement\n\t\t\t(enabled no)\n\t\t\t(sheetname "")\n\t\t)\n'
+        f'\t\t(fill\n\t\t\t(thermal_gap 0.5)\n\t\t\t(thermal_bridge_width 0.5)\n\t\t)\n'
+        f'\t\t(polygon\n\t\t\t(pts\n\t\t\t\t{xy}\n\t\t\t)\n\t\t)\n\t)\n')
+_orig_save = Board.save
+def _save2(self, path=None):
+    z = getattr(self, "added_zones", [])
+    if z:
+        k = self.s.find("\n\t(zone\n") + 1
+        self.s = self.s[:k] + "".join(z) + self.s[k:]; self.added_zones = []
+    _orig_save(self, path)
+Board.keepout = _keepout; Board.save = _save2
