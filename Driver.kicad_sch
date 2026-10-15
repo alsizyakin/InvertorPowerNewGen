@@ -1549,6 +1549,26 @@
 		)
 		(uuid "9180a467-35c7-4105-af14-c81874b763f6")
 	)
+	(wire
+		(pts
+			(xy 184.15 96.52) (xy 189.23 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cdcaa80-6e4a-4678-b458-80c028cae11a")
+	)
+	(wire
+		(pts
+			(xy 184.15 120.65) (xy 189.23 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72170b59-d21e-4d02-9cc7-8c4192a87054")
+	)
 	(symbol
 		(lib_id "Device:R_Small")
 		(at 186.69 104.14 90)
@@ -1580,7 +1600,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 186.69 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -1689,104 +1709,7 @@
 		)
 		(uuid "57d3399e-e9a8-485d-9e24-87ebff873d2c")
 	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 186.69 96.52 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "46c77c8d-3a49-4638-a561-d936e1999f91")
-		(property "Reference" "R109"
-			(at 186.69 94.615 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 186.69 98.425 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 186.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Resistor SMD 1%"
-			(at 186.69 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f9be7830-5dbd-4c1b-9aff-dce444c81e3e")
-		)
-		(pin "2"
-			(uuid "2cb4d678-27dd-407f-8db6-b0187fea07df")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "R109")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "R110")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "R111")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(wire
 		(pts
 			(xy 189.23 96.52) (xy 191.77 96.52)
@@ -1828,7 +1751,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 194.31 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -1987,7 +1910,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 186.69 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -2096,104 +2019,7 @@
 		)
 		(uuid "4be53fed-9105-4601-9c82-750723f723cc")
 	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 186.69 120.65 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a44dd86e-27d8-4f94-92ac-eda0845f18bc")
-		(property "Reference" "R115"
-			(at 186.69 118.745 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 186.69 122.555 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 186.69 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Resistor SMD 1%"
-			(at 186.69 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3771b67f-a0aa-4ff4-bf8a-4b88b62b1c85")
-		)
-		(pin "2"
-			(uuid "cd54c6f2-58b4-4e43-8a06-4838d1bc7c64")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "R115")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "R116")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "R117")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(wire
 		(pts
 			(xy 189.23 120.65) (xy 191.77 120.65)
@@ -2235,7 +2061,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-323_HandSoldering"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 194.31 120.65 0)
 			(hide yes)
 			(show_name no)
