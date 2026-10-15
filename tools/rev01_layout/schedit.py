@@ -83,8 +83,6 @@ class Sch:
         if len(m) != 1: raise ValueError(f"{head_re}: {len(m)} matches")
         return block_at(self.s, m[0].start() + 1)
     def remove_wire(self, x1, y1, x2, y2):
-        for a, b in ((x1, y1, x2, y2), (x2, y2, x1, y1)) if False else ((x1, y1, x2, y2), (x2, y2, x1, y1)):
-            pass
         pat = [rf'\n\t\(wire\n\t\t\(pts\n\t\t\t\(xy {re.escape(f(p))} {re.escape(f(q))}\) \(xy {re.escape(f(r))} {re.escape(f(t))}\)'
                for p, q, r, t in ((x1, y1, x2, y2), (x2, y2, x1, y1))]
         hits = [m for p in pat for m in re.finditer(p, self.s)]
