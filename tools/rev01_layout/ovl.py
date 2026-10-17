@@ -1,5 +1,5 @@
 """Raster overlap (0.05 mm) of copper of different nets on two adjacent layers, e.g. In4 over B.Cu, F.Cu over In1.
-Raster overlap (0.05 mm) of copper of net pairs on two adjacent layers. Usage: ovl_check.py board layA layB x0 y0 x1 y1"""
+Usage: ovl.py board layA layB x0 y0 x1 y1 [net-substring,...]"""
 import sys, collections, numpy as np
 sys.path.insert(0, "/home/alexey/Git/KiCad/InvertorPowerNewGen/bench_2026-10-13/tools"); sys.dont_write_bytecode = True
 import kpcb
