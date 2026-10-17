@@ -1318,6 +1318,126 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 120.65 137.16 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "240874c4-43fc-43fe-984c-0c4404ce48ec")
+		(property "Reference" "C125"
+			(at 121.92 136.525 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u 100V X7R"
+			(at 121.92 138.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 120.65 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Capacitor SMD 100V X7R"
+			(at 120.65 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "329b979d-5506-4c17-80d3-290982b613f9")
+		)
+		(pin "2"
+			(uuid "9dce7b4b-339f-4ae7-af68-1d1ee1b07986")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f977a2eb-d10b-44d6-a07c-b8311dd9b73f"
+					(reference "C125")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/7176583c-694b-43e7-a08f-7dfec6a5a7f3"
+					(reference "C129")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/fe135066-9555-4a85-b389-3791e4e86e93"
+					(reference "C133")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 105.41 134.62) (xy 120.65 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06b10272-648b-4189-955b-10f52091d990")
+	)
+	(wire
+		(pts
+			(xy 105.41 139.7) (xy 120.65 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90d3413a-9dec-48a5-9d67-aa62be65356d")
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 105.41 137.16 0)
 		(unit 1)
 		(body_style 1)
@@ -2283,7 +2403,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.51"
+		(property "Value" "0.47"
 			(at 137.795 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2294,7 +2414,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0612_1632Metric_Pad1.18x3.40mm_HandSolder"
 			(at 135.89 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -2327,7 +2447,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Resistor SMD 0.5W"
+		(property "Description P/N" "Resistor SMD 0612 1.5W"
 			(at 135.89 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -2559,7 +2679,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.51"
+		(property "Value" "0.47"
 			(at 137.795 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2570,7 +2690,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0612_1632Metric_Pad1.18x3.40mm_HandSolder"
 			(at 135.89 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -2603,7 +2723,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Resistor SMD 0.5W"
+		(property "Description P/N" "Resistor SMD 0612 1.5W"
 			(at 135.89 113.03 0)
 			(hide yes)
 			(show_name no)

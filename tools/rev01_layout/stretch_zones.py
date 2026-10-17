@@ -35,8 +35,9 @@ def vdc(pts):
     for p in pts: out += rep.get(p, [p])
     return out
 s = zone_edit(s, "VDC", '"F.Cu" "B.Cu"', (116.25, 169.25), vdc)
-# drop C90, C93, C94 and their GND stubs/vias
-for ref in ("C90", "C93", "C94"):
+# drop C90, C93, C94 and their GND stubs/vias (KEEP0603=1: park them off the board instead, lay_P4.py places them)
+KEEP = __import__("os").environ.get("KEEP0603") == "1"
+for ref in (() if KEEP else ("C90", "C93", "C94")):
     m = re.search(r'\n\t\(footprint "[^"]+"\n(?:(?!\n\t\(footprint).)*?\(property "Reference" "' + ref + '"', s, re.S)
     a = m.start(); d = 0
     for k in range(a + 2, len(s)):
@@ -48,6 +49,8 @@ for ref in ("C90", "C93", "C94"):
 import pcbedit
 open(fo, "w", encoding="utf-8").write(s)
 B = pcbedit.Board(fo)
+if KEEP:
+    for k, ref in enumerate(("C90", "C93", "C94")): B.move_fp(ref, 95.0, 110.0 + 3*k)
 stub = lambda g: g["layer"] == "F.Cu" and g["net"] == "GND" and any(abs(g[k1] - a) < 0.02 and abs(g[k2] - b) < 0.02
         for k1, k2 in (("x1", "y1"), ("x2", "y2")) for a, b in ((118.89, 73.5), (118.25, 73.5), (141.89, 73.75), (141.25, 73.75)))
 nseg = sum(1 for g in B.segments() if stub(g))

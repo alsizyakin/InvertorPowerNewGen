@@ -1,0 +1,365 @@
+{
+ "C": {
+  "LS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 119.6,
+   "y": 72.5,
+   "rot": 0,
+   "cx": 122.285,
+   "cy": 72.537,
+   "crot": 270,
+   "bridge": [
+    [
+     120.438,
+     71.5
+    ],
+    [
+     122.285,
+     71.5
+    ]
+   ],
+   "rnet": "GND",
+   "cnet": "/Current_Sensor_3/Phase_IN",
+   "nets": [
+    "GND",
+    "X",
+    "X",
+    "/Current_Sensor_3/Phase_IN"
+   ],
+   "score": 1.53,
+   "dR": 1.14,
+   "dC": 0.39,
+   "vias": []
+  },
+  "HS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 126.4,
+   "y": 72.5,
+   "rot": 0,
+   "cx": 129.085,
+   "cy": 72.537,
+   "crot": 270,
+   "bridge": [
+    [
+     127.238,
+     71.5
+    ],
+    [
+     129.085,
+     71.5
+    ]
+   ],
+   "rnet": "/Current_Sensor_3/Phase_IN",
+   "cnet": "VDC",
+   "nets": [
+    "/Current_Sensor_3/Phase_IN",
+    "X",
+    "X",
+    "VDC"
+   ],
+   "score": 1.84,
+   "dR": 1.46,
+   "dC": 0.39,
+   "vias": []
+  },
+  "CER1": {
+   "kind": "C1206",
+   "x": 132.6,
+   "y": 73.3,
+   "rot": 0,
+   "vias": [
+    [
+     135.145,
+     73.75
+    ],
+    [
+     135.145,
+     72.85
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 1.68
+  },
+  "C06a": {
+   "kind": "C0603",
+   "x": 131.8,
+   "y": 71.3,
+   "rot": 0,
+   "vias": [
+    [
+     133.52,
+     71.3
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 3.26
+  },
+  "C06b": {
+   "kind": "C0603",
+   "x": 141.4,
+   "y": 71.1,
+   "rot": 270,
+   "vias": [
+    [
+     141.4,
+     72.82
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 10.51
+  }
+ },
+ "B": {
+  "LS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 136.9,
+   "y": 72.5,
+   "rot": 0,
+   "cx": 139.585,
+   "cy": 72.537,
+   "crot": 270,
+   "bridge": [
+    [
+     137.738,
+     71.5
+    ],
+    [
+     139.585,
+     71.5
+    ]
+   ],
+   "rnet": "GND",
+   "cnet": "/Current_Sensor_2/Phase_IN",
+   "nets": [
+    "GND",
+    "X",
+    "X",
+    "/Current_Sensor_2/Phase_IN"
+   ],
+   "score": 1.53,
+   "dR": 1.14,
+   "dC": 0.39,
+   "vias": []
+  },
+  "HS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 143.9,
+   "y": 72.5,
+   "rot": 0,
+   "cx": 146.585,
+   "cy": 72.537,
+   "crot": 270,
+   "bridge": [
+    [
+     144.738,
+     71.5
+    ],
+    [
+     146.585,
+     71.5
+    ]
+   ],
+   "rnet": "/Current_Sensor_2/Phase_IN",
+   "cnet": "VDC",
+   "nets": [
+    "/Current_Sensor_2/Phase_IN",
+    "X",
+    "X",
+    "VDC"
+   ],
+   "score": 1.6,
+   "dR": 1.21,
+   "dC": 0.39,
+   "vias": []
+  },
+  "CER1": {
+   "kind": "C1206",
+   "x": 150.1,
+   "y": 73.3,
+   "rot": 0,
+   "vias": [
+    [
+     151.662,
+     74.52
+    ],
+    [
+     151.662,
+     72.08
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 2.05
+  },
+  "C06a": {
+   "kind": "C0603",
+   "x": 149.4,
+   "y": 71.3,
+   "rot": 0,
+   "vias": [
+    [
+     151.12,
+     71.3
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 3.38
+  },
+  "C06b": {
+   "kind": "C0603",
+   "x": 164.6,
+   "y": 68.7,
+   "rot": 0,
+   "vias": [
+    [
+     166.32,
+     68.7
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 17.15
+  }
+ },
+ "A": {
+  "LS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 154.3,
+   "y": 72.5,
+   "rot": 0,
+   "cx": 156.985,
+   "cy": 72.537,
+   "crot": 270,
+   "bridge": [
+    [
+     155.138,
+     71.5
+    ],
+    [
+     156.985,
+     71.5
+    ]
+   ],
+   "rnet": "GND",
+   "cnet": "/Current_Sensor_1/Phase_IN",
+   "nets": [
+    "GND",
+    "X",
+    "X",
+    "/Current_Sensor_1/Phase_IN"
+   ],
+   "score": 1.53,
+   "dR": 1.14,
+   "dC": 0.39,
+   "vias": []
+  },
+  "HS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 160.7,
+   "y": 72.5,
+   "rot": 0,
+   "cx": 163.385,
+   "cy": 72.537,
+   "crot": 270,
+   "bridge": [
+    [
+     161.537,
+     71.5
+    ],
+    [
+     163.385,
+     71.5
+    ]
+   ],
+   "rnet": "/Current_Sensor_1/Phase_IN",
+   "cnet": "VDC",
+   "nets": [
+    "/Current_Sensor_1/Phase_IN",
+    "X",
+    "X",
+    "VDC"
+   ],
+   "score": 1.68,
+   "dR": 1.29,
+   "dC": 0.39,
+   "vias": []
+  },
+  "CER1": {
+   "kind": "C1206",
+   "x": 165.7,
+   "y": 72.1,
+   "rot": 90,
+   "vias": [
+    [
+     166.15,
+     69.555
+    ],
+    [
+     165.25,
+     69.555
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 2.46
+  },
+  "C06a": {
+   "kind": "C0603",
+   "x": 167.6,
+   "y": 71.7,
+   "rot": 270,
+   "vias": [
+    [
+     167.6,
+     73.42
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 3.55
+  },
+  "C06b": {
+   "kind": "C0603",
+   "x": 121.6,
+   "y": 69.7,
+   "rot": 0,
+   "vias": [
+    [
+     123.32,
+     69.7
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 44.14
+  }
+ }
+}
