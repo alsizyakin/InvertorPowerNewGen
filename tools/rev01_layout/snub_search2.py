@@ -1,4 +1,5 @@
-"""§5: exhaustive search of F.Cu places for the RC snubbers (C + R in series), per phase and per type:
+"""Env CANY = y of the lower bulk-cap row centres (default 69.13; 65.13 on the +4 mm board), Y0 = start of the y scan.
+§5: exhaustive search of F.Cu places for the RC snubbers (C + R in series), per phase and per type:
 LS = node - C - X - R - GND, HS = VDC - C - X - R - node. A terminal pad counts as connected when its centre lies
 in a filled F.Cu zone of its net; X pads must be within 1.0 mm (edge to edge) and joinable by a straight track.
 Clearance 0.2 to other-net copper (pads, tracks, vias), courtyards (shrunk 0.25) incl. the bulk-cap circles,
@@ -48,7 +49,7 @@ for v in G.vias:
 for s in G.segs:
     if s["layer"] == "F.Cu":
         add(("seg", s, s["net"]), min(s["x1"], s["x2"]) - s["w"], min(s["y1"], s["y2"]) - s["w"], max(s["x1"], s["x2"]) + s["w"], max(s["y1"], s["y2"]) + s["w"])
-CANS = [(x, 69.13, 5.25) for x in (127.0, 137.5, 148.0, 158.5)]
+CANS = [(x, float(__import__("os").environ.get("CANY", "69.13")), 5.25) for x in (127.0, 137.5, 148.0, 158.5)]
 def near_objs(x0, y0, x1, y1):
     seen = set(); res = []
     for i in range(int(x0 // B), int(x1 // B) + 1):
@@ -143,7 +144,7 @@ for ph, P in PH.items():
         tgtC = [(p["x"], p["y"]) for p in qp if p["net"] == netC]; tgtR = [(p["x"], p["y"]) for p in qp if p["net"] == netR]
         colof = {"GND": P["cols"][0], P["node"]: P["cols"][1], "VDC": P["cols"][2]}
         Cs, Rs = [], []
-        y = 70.0
+        y = float(__import__("os").environ.get("Y0", "70.0"))
         while y <= 100.0:
             x = x0
             while x <= x1:
