@@ -20,7 +20,9 @@ def dom(n):
     if m and m.group(1) in HSG: return ('hs',HSG[m.group(1)])
     m=re.match(r'Net-\(D([123])-K\)',n)
     if m: return ('hs',{'1':'C','2':'B','3':'A'}[m.group(1)])
-    if re.match(r'Net-\(C11[2-7]-Pad2\)',n): return None
+    # snubber middle point X: at DC it sits on the far end of R - GND for the LS chains, the node for the HS chains (07 P9)
+    m=re.match(r'Net-\(C11([2-7])-Pad2\)',n)
+    if m: return ('GND',) if m.group(1) in '234' else ('node',{'5':'C','6':'B','7':'A'}[m.group(1)])
     return ('lv',)
 def dv(a,b):
     if a is None or b is None or a==b: return 0
