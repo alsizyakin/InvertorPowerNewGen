@@ -137,3 +137,22 @@ print("F6 stitching vias: edge", n_edge, "connectors", len(new) - n_edge, [(roun
 B = pcbedit.Board(fn)
 B.added.append(pcbedit.via_text(138.45, 103.38, "GND").replace('(layers "F.Cu" "B.Cu")\n', '(layers "F.Cu" "B.Cu")\n\t\t(free yes)\n'))
 B.save(); print("F8 island via (138.45, 103.38)")
+# ---- F9 (P5): clearances of exposed pads for the 72-84 V variant.
+# C124/C128 (with the VDC via and both stubs) +0.3 mm in x: the VDC pad clears R19.2/C100.1 and R30.2/C104.1 by 0.53 mm,
+# the GND pad goes deeper into the GND strip of the next phase. The bootstrap caps C7/C8/C9 -0.3 mm in x: the HI tracks
+# of the next driver clear them by 0.53 mm (all track ends stay inside the pads; C9 for the symmetry of the phases).
+B = pcbedit.Board(fn)
+for ref, x0, vv, vg in (("C124", 132.35, 131.787, 132.912), ("C128", 149.35, 148.787, 149.912)):
+    B.move_fp(ref, x0 + 0.3, 82.15)
+    k = B.del_segs(lambda g: g["layer"] == "F.Cu" and (seg_is(g, (x0 - 1.1, 82.15), (vv, 81.15)) or seg_is(g, (x0 + 1.1, 82.15), (vg, 81.15)))); assert k == 2, (ref, k)
+    k = B.del_vias(lambda v: abs(v["y"] - 81.15) < 1e-3 and abs(v["x"] - vv) < 2e-3); assert k == 1, (ref, k)
+    B.track([(x0 - 0.8, 82.15), (vv + 0.3, 81.15)], 0.5, "F.Cu", "VDC"); B.add_via((vv + 0.3, 81.15), "VDC")
+    B.track([(x0 + 1.4, 82.15), (vg, 81.15)], 0.5, "F.Cu", "GND")      # GND via stays (C106.1 / C110.1 next to it)
+for ref, x0 in (("C7", 135.75), ("C8", 147.75), ("C9", 159.75)):
+    B.move_fp(ref, x0 - 0.3, 106.75)
+B.save(); print("F9 C124/C128 +0.3, C7/C8/C9 -0.3")
+# ---- F10 (P1): C132 (phase A, no GND strip next to its GND pad) gets a second GND via at the inner edge of the pad,
+# next to the existing one at (167.21, 81.15); outside the pad there is no other free spot (edge, Q3/Q12, C108).
+B = pcbedit.Board(fn)
+B.track([(167.75, 82.15), (167.313, 82.15)], 0.5, "F.Cu", "GND"); B.add_via((167.313, 82.15), "GND")
+B.save(); print("F10 C132 second GND via (167.313, 82.15)")
