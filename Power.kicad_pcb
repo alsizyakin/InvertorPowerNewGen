@@ -6098,7 +6098,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "e0914310-c82e-461d-83f6-bfbe5ca4fc40")
@@ -6143,7 +6143,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6166,7 +6166,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -7166,7 +7166,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "5f69f3bc-214c-4079-b026-b0c9825668fc")
@@ -7211,7 +7211,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7234,7 +7234,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -8520,7 +8520,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "f50d34e3-92a7-4c77-8f87-99dfedaab465")
@@ -8565,7 +8565,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8588,7 +8588,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -9086,7 +9086,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 270)
 			(layer "F.Fab")
 			(uuid "7c64c93c-9506-41ce-b5e3-6d5862308198")
@@ -9131,7 +9131,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9154,7 +9154,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -14548,7 +14548,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.61 0.85)
@@ -15841,7 +15841,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "f759fb66-f206-4322-a032-d6eb19bdce0a")
@@ -15886,7 +15886,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15909,7 +15909,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 -0.51)
@@ -22392,7 +22392,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "9f075397-bbfc-439e-a792-8f1a543bc478")
@@ -22437,7 +22437,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22460,7 +22460,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -35333,7 +35333,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "a7941564-ee69-4629-a4c0-ebe482e4c1c3")
@@ -35378,7 +35378,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35401,7 +35401,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -36897,7 +36897,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.61 0.85)
@@ -41310,7 +41310,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "3be31cbe-2899-453e-bc8a-d40389b1a45d")
@@ -41355,7 +41355,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41378,7 +41378,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -44895,7 +44895,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 270)
 			(layer "F.Fab")
 			(uuid "af2b0034-52ce-41cc-8181-894b42696ac1")
@@ -44940,7 +44940,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -44963,7 +44963,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -59122,7 +59122,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "bebdcbbc-4b61-4fd9-b02a-5fc51137bc87")
@@ -59167,7 +59167,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59190,7 +59190,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -62896,7 +62896,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "f1166783-b2e4-479d-b7e4-614a5d117371")
@@ -62941,7 +62941,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62964,7 +62964,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -63484,7 +63484,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 0 1.43 180)
 			(layer "F.Fab")
 			(uuid "f1a369b4-3084-48bd-8517-c3caa212c45d")
@@ -63529,7 +63529,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -63552,7 +63552,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.146267 0.51)
@@ -71405,7 +71405,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.61 -0.85)
@@ -72439,7 +72439,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.61 -0.85)
@@ -79375,7 +79375,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.61 -0.85)
@@ -85726,7 +85726,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.61 -0.85)

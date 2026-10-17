@@ -1595,7 +1595,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "60c99295-1ba3-49c3-a030-031b1167f251")
 		(property "Reference" "C100"
 			(at 104.775 81.915 0)
@@ -1608,7 +1608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 104.775 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1652,7 +1652,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 106.68 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -1715,7 +1715,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "48f34d79-5f9d-464e-a961-4cc73e546ddf")
 		(property "Reference" "C101"
 			(at 154.305 81.915 0)
@@ -1728,7 +1728,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 154.305 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1772,7 +1772,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 156.21 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -1835,7 +1835,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "499df107-72b3-4f78-bb4c-09537191bd0b")
 		(property "Reference" "C102"
 			(at 104.775 113.03 0)
@@ -1848,7 +1848,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 104.775 114.935 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1892,7 +1892,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 106.68 113.665 0)
 			(hide yes)
 			(show_name no)
@@ -1955,7 +1955,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "dc108db6-17eb-48ca-825b-9dc092722f1a")
 		(property "Reference" "C103"
 			(at 154.305 113.03 0)
@@ -1968,7 +1968,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "4.7n"
+		(property "Value" "10n 50V C0G"
 			(at 154.305 114.935 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2012,7 +2012,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Capacitor SMD 50V"
+		(property "Description P/N" "Capacitor SMD 50V C0G"
 			(at 156.21 113.665 0)
 			(hide yes)
 			(show_name no)

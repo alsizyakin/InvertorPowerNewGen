@@ -1729,7 +1729,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "96e2e63d-9ecc-4f0c-9fae-299bf383988c")
 		(property "Reference" "D30"
 			(at 194.31 93.98 0)
@@ -2039,7 +2039,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "e9d4aacd-373a-44b7-a874-24c5be31350b")
 		(property "Reference" "D33"
 			(at 194.31 118.11 0)
