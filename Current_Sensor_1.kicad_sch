@@ -2361,7 +2361,7 @@
 				)
 			)
 		)
-		(property "Replacement" ""
+		(property "Replacement" "INA241A2DR при VDC 72 В"
 			(at 143.51 109.22 0)
 			(hide yes)
 			(show_name no)

@@ -70271,7 +70271,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Replacement" ""
+		(property "Replacement" "INA241A2DR при VDC 72 В"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -77052,7 +77052,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Replacement" ""
+		(property "Replacement" "INA241A2DR при VDC 72 В"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -79180,7 +79180,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Replacement" ""
+		(property "Replacement" "INA241A2DR при VDC 72 В"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -97182,6 +97182,7 @@
 		(size 0.6)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
+		(free yes)
 		(net "GND")
 		(uuid "3929be98-ba1d-4c72-b87c-d866cda95ca5")
 	)

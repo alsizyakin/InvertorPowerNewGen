@@ -12,9 +12,11 @@ def seg_text(x1, y1, x2, y2, w, layer, net, uid=None):
     return (f'\t(segment\n\t\t(start {fmt(x1)} {fmt(y1)})\n\t\t(end {fmt(x2)} {fmt(y2)})\n\t\t(width {fmt(w)})\n'
             f'\t\t(layer "{layer}")\n\t\t(net "{net}")\n\t\t(uuid "{uid or uuid.uuid4()}")\n\t)\n')
 
-def via_text(x, y, net, size=0.6, drill=0.3, uid=None):
+def via_text(x, y, net, size=0.6, drill=0.3, uid=None, free=False):
+    """free=True: a stitching via without tracks; KiCad then keeps its net instead of taking one from the copper."""
     return (f'\t(via\n\t\t(at {fmt(x)} {fmt(y)})\n\t\t(size {fmt(size)})\n\t\t(drill {fmt(drill)})\n'
-            f'\t\t(layers "F.Cu" "B.Cu")\n\t\t(net "{net}")\n\t\t(uuid "{uid or uuid.uuid4()}")\n\t)\n')
+            f'\t\t(layers "F.Cu" "B.Cu")\n' + ('\t\t(free yes)\n' if free else '') +
+            f'\t\t(net "{net}")\n\t\t(uuid "{uid or uuid.uuid4()}")\n\t)\n')
 
 class Board:
     def __init__(self, path):
@@ -57,8 +59,8 @@ class Board:
     def add_seg(self, a, b, w, layer, net):
         self.added.append(seg_text(a[0], a[1], b[0], b[1], w, layer, net))
 
-    def add_via(self, p, net, size=0.6, drill=0.3):
-        self.added.append(via_text(p[0], p[1], net, size, drill))
+    def add_via(self, p, net, size=0.6, drill=0.3, free=False):
+        self.added.append(via_text(p[0], p[1], net, size, drill, free=free))
 
     def save(self, path=None):
         s = self.s

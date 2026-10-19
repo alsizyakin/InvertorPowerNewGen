@@ -1,0 +1,286 @@
+{
+ "_note": "Proposed stitching vias 0.6/0.3 (free), cflow.py 2026-10-19; DRC-clean on a copy of b2f3c90. Not applied.",
+ "vias": [
+  {
+   "case": "node_C_LS",
+   "net": "/Current_Sensor_3/Phase_IN",
+   "x": 126.5,
+   "y": 102.75
+  },
+  {
+   "case": "node_C_LS",
+   "net": "/Current_Sensor_3/Phase_IN",
+   "x": 125.5,
+   "y": 103.0
+  },
+  {
+   "case": "node_A_LS",
+   "net": "/Current_Sensor_1/Phase_IN",
+   "x": 159.0,
+   "y": 103.5
+  },
+  {
+   "case": "node_A_LS",
+   "net": "/Current_Sensor_1/Phase_IN",
+   "x": 159.5,
+   "y": 102.75
+  },
+  {
+   "case": "node_A_LS",
+   "net": "/Current_Sensor_1/Phase_IN",
+   "x": 160.25,
+   "y": 102.25
+  },
+  {
+   "case": "node_A_LS",
+   "net": "/Current_Sensor_1/Phase_IN",
+   "x": 161.25,
+   "y": 104.0
+  },
+  {
+   "case": "node_A_LS",
+   "net": "/Current_Sensor_1/Phase_IN",
+   "x": 161.0,
+   "y": 101.75
+  },
+  {
+   "case": "VDC_C_HS",
+   "net": "VDC",
+   "x": 126.25,
+   "y": 70.0
+  },
+  {
+   "case": "VDC_C_HS",
+   "net": "VDC",
+   "x": 128.75,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_C_HS",
+   "net": "VDC",
+   "x": 129.0,
+   "y": 67.75
+  },
+  {
+   "case": "VDC_C_HS",
+   "net": "VDC",
+   "x": 132.75,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_C_HS",
+   "net": "VDC",
+   "x": 130.0,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_B_HS",
+   "net": "VDC",
+   "x": 146.25,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_B_HS",
+   "net": "VDC",
+   "x": 144.0,
+   "y": 70.0
+  },
+  {
+   "case": "VDC_B_HS",
+   "net": "VDC",
+   "x": 150.25,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_B_HS",
+   "net": "VDC",
+   "x": 146.0,
+   "y": 67.75
+  },
+  {
+   "case": "VDC_B_HS",
+   "net": "VDC",
+   "x": 147.25,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_B_HS",
+   "net": "VDC",
+   "x": 150.0,
+   "y": 67.75
+  },
+  {
+   "case": "VDC_A_HS",
+   "net": "VDC",
+   "x": 163.75,
+   "y": 70.0
+  },
+  {
+   "case": "VDC_A_HS",
+   "net": "VDC",
+   "x": 164.5,
+   "y": 73.0
+  },
+  {
+   "case": "VDC_A_HS",
+   "net": "VDC",
+   "x": 160.5,
+   "y": 67.75
+  },
+  {
+   "case": "VDC_A_HS",
+   "net": "VDC",
+   "x": 163.0,
+   "y": 74.5
+  },
+  {
+   "case": "VDC_A_HS",
+   "net": "VDC",
+   "x": 160.5,
+   "y": 70.0
+  },
+  {
+   "case": "VDC_A_HS",
+   "net": "VDC",
+   "x": 162.5,
+   "y": 70.0
+  },
+  {
+   "case": "GND_C_LS",
+   "net": "GND",
+   "x": 117.75,
+   "y": 72.0
+  },
+  {
+   "case": "GND_C_LS",
+   "net": "GND",
+   "x": 117.0,
+   "y": 72.5
+  },
+  {
+   "case": "GND_C_LS",
+   "net": "GND",
+   "x": 117.75,
+   "y": 74.25
+  },
+  {
+   "case": "GND_C_LS",
+   "net": "GND",
+   "x": 117.75,
+   "y": 73.0
+  },
+  {
+   "case": "GND_C_LS",
+   "net": "GND",
+   "x": 117.0,
+   "y": 73.75
+  },
+  {
+   "case": "GND_C_LS",
+   "net": "GND",
+   "x": 117.0,
+   "y": 71.5
+  },
+  {
+   "case": "GND_B_LS",
+   "net": "GND",
+   "x": 133.5,
+   "y": 70.25
+  },
+  {
+   "case": "GND_B_LS",
+   "net": "GND",
+   "x": 136.0,
+   "y": 70.5
+  },
+  {
+   "case": "GND_B_LS",
+   "net": "GND",
+   "x": 136.75,
+   "y": 70.0
+  },
+  {
+   "case": "GND_B_LS",
+   "net": "GND",
+   "x": 135.0,
+   "y": 70.5
+  },
+  {
+   "case": "GND_B_LS",
+   "net": "GND",
+   "x": 135.5,
+   "y": 69.75
+  },
+  {
+   "case": "GND_B_LS",
+   "net": "GND",
+   "x": 139.0,
+   "y": 70.0
+  },
+  {
+   "case": "GND_A_LS",
+   "net": "GND",
+   "x": 152.5,
+   "y": 71.75
+  },
+  {
+   "case": "GND_A_LS",
+   "net": "GND",
+   "x": 156.0,
+   "y": 69.75
+  },
+  {
+   "case": "GND_A_LS",
+   "net": "GND",
+   "x": 152.0,
+   "y": 71.0
+  },
+  {
+   "case": "GND_A_LS",
+   "net": "GND",
+   "x": 150.5,
+   "y": 70.5
+  },
+  {
+   "case": "GND_A_LS",
+   "net": "GND",
+   "x": 153.75,
+   "y": 70.25
+  },
+  {
+   "case": "GND_A_LS",
+   "net": "GND",
+   "x": 152.75,
+   "y": 70.25
+  }
+ ],
+ "phase_A_after_NTC_rework": {
+  "net": "/Current_Sensor_1/Phase_IN",
+  "pts": [
+   [
+    158.75,
+    101.25
+   ],
+   [
+    159.0,
+    103.5
+   ],
+   [
+    159.0,
+    102.25
+   ],
+   [
+    159.75,
+    103.0
+   ],
+   [
+    159.75,
+    101.75
+   ],
+   [
+    157.25,
+    99.75
+   ]
+  ]
+ }
+}

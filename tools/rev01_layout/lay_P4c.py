@@ -27,7 +27,7 @@ B.track([(121.0, 73.4), (121.0, 91.3), V], 0.4, "In2.Cu", "VDC")
 B.add_via(V, "VDC")
 B.track([V, (121.6, 92.3), (123.25, 93.95), (123.25, 97.65), (119.5, 101.4), (119.5, 104.25)], 0.4, "In1.Cu", "VDC")
 assert B.del_vias(lambda v: v["net"] == "GND" and abs(v["x"] - 120.65) < 1e-3 and abs(v["y"] - 77.5) < 1e-3) == 1
-B.add_via((120.25, 77.5), "GND")
+B.add_via((120.25, 77.5), "GND", free=True)
 print("F15: VDC to J6 rerouted (In2 from the top band, via", V, ", In1 through passage C); near-S via of Q8 moved")
 
 # ---------------------------------------------------------------- F16

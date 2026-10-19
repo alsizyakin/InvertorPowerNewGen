@@ -2,7 +2,9 @@
 1 IN-, 2 GND, 3 REF2, 4 NC, 5 OUT, 6 VS, 7 REF1, 8 IN+; gain 20 V/V as before; common mode -4...80 V, abs. max 90 V,
 against 70 V of AD8418). The stock INA240A1D symbol has other pin positions, so a project symbol Logic_My:INA240A1D is
 made from the AD8418 drawing; the sheets Current_Sensor_1..3 point to it. The same fields go onto the board
-footprints, so the board stays in parity without Update PCB from Schematic. Usage: sch_rev01_f.py <project dir>"""
+footprints, so the board stays in parity without Update PCB from Schematic.
+Owner 2026-10-19 (round 2): INA240A1 stays; for a 72 V bus it is replaced by INA241A2 (SOIC-8, same pins, 20 V/V,
+-5...110 V) - written into the Replacement field. Usage: sch_rev01_f.py <project dir>"""
 import sys, os, re
 
 d = sys.argv[1]
@@ -12,6 +14,7 @@ DS = "https://www.ti.com/lit/ds/symlink/ina240.pdf"
 DESC = ("-4...80V Bidirectional, Zero Drift, Current Sense Amplifier With Enhanced PWM Rejection, 20V/V gain, "
         "bandwidth 400kHz, VS=2.7V~5.5V, SOIC-8 (pin compatible with AD8418)")
 PN = "INA240A1DR"
+REPL = "INA241A2DR при VDC 72 В"
 FP = "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 
 def block(s, i):
@@ -38,21 +41,23 @@ def new_cache(old):
     t = sub1(r'\(property "ki_fp_filters" "[^"]*"', '(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"', t)
     return t
 
-cache = None
-for fn in SHEETS:
-    p = os.path.join(d, fn); s = open(p, encoding="utf-8").read()
-    if 'lib_id "Logic_My:INA240A1D"' in s: continue
-    i = s.find('\t\t(symbol "Amplifier_Current:AD8418"\n'); assert i > 0, fn
-    a, b = block(s, i + 2)
-    cache = new_cache(s[a:b])
-    s = s[:a] + cache + s[b:]
-    s = sub1(r'\(lib_id "Amplifier_Current:AD8418"\)', '(lib_id "Logic_My:INA240A1D")', s)
-    i = s.find('(lib_id "Logic_My:INA240A1D")'); a = s.rfind("\n\t(symbol\n", 0, i) + 1; a, b = block(s, a + 1)
-    blk = s[a:b]
+def fields(blk):
     blk = sub1(r'\(property "Datasheet" "[^"]*"', f'(property "Datasheet" "{DS}"', blk)
     blk = sub1(r'\(property "Description" "[^"]*"', f'(property "Description" "{DESC}"', blk)
     blk = sub1(r'\(property "Product Name" "[^"]*"', f'(property "Product Name" "{PN}"', blk)
-    s = s[:a] + blk + s[b:]
+    return sub1(r'\(property "Replacement" "[^"]*"', f'(property "Replacement" "{REPL}"', blk)
+
+cache = None
+for fn in SHEETS:
+    p = os.path.join(d, fn); s = open(p, encoding="utf-8").read()
+    if 'lib_id "Logic_My:INA240A1D"' not in s:
+        i = s.find('\t\t(symbol "Amplifier_Current:AD8418"\n'); assert i > 0, fn
+        a, b = block(s, i + 2)
+        cache = new_cache(s[a:b])
+        s = s[:a] + cache + s[b:]
+        s = sub1(r'\(lib_id "Amplifier_Current:AD8418"\)', '(lib_id "Logic_My:INA240A1D")', s)
+    i = s.find('(lib_id "Logic_My:INA240A1D")'); a = s.rfind("\n\t(symbol\n", 0, i) + 1; a, b = block(s, a + 1)
+    s = s[:a] + fields(s[a:b]) + s[b:]
     open(p, "w", encoding="utf-8").write(s)
 
 # project library: the same symbol, one indent level less
@@ -69,10 +74,6 @@ p = os.path.join(d, "Power.kicad_pcb"); s = open(p, encoding="utf-8").read()
 for ref in REFS:
     i = s.find(f'(property "Reference" "{ref}"'); assert i > 0, ref
     a = s.rfind("\n\t(footprint ", 0, i) + 1; a, b = block(s, a + 1)
-    blk = s[a:b]
-    blk = sub1(r'\(property "Datasheet" "[^"]*"', f'(property "Datasheet" "{DS}"', blk)
-    blk = sub1(r'\(property "Description" "[^"]*"', f'(property "Description" "{DESC}"', blk)
-    blk = sub1(r'\(property "Product Name" "[^"]*"', f'(property "Product Name" "{PN}"', blk)
-    s = s[:a] + blk + s[b:]
+    s = s[:a] + fields(s[a:b]) + s[b:]
 open(p, "w", encoding="utf-8").write(s)
-print("U4, U9, U12: AD8418 -> INA240A1 (Logic_My:INA240A1D), schematic and board")
+print("U4, U9, U12: AD8418 -> INA240A1 (Logic_My:INA240A1D), replacement INA241A2 at 72 V; schematic and board")
