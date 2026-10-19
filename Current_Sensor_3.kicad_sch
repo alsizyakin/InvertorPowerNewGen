@@ -5,7 +5,7 @@
 	(uuid "8d3f05ce-e1f9-42d2-9f1b-18d147db522a")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Amplifier_Current:AD8418"
+		(symbol "Logic_My:INA240A1D"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -22,7 +22,7 @@
 					(justify right)
 				)
 			)
-			(property "Value" "AD8418"
+			(property "Value" "INA240A1D"
 				(at -7.62 8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -33,7 +33,7 @@
 					(justify right)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 				(at 1.27 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -44,7 +44,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8418.pdf"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina240.pdf"
 				(at 16.51 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -55,7 +55,7 @@
 					)
 				)
 			)
-			(property "Description" "70V Bidirectional, Zero Drift, Current Sense Amplifier, 20V/V gain, bandwidth 250kHz, VS=2.7V~5.5V, SOIC-8/MSOP-8"
+			(property "Description" "-4...80V Bidirectional, Zero Drift, Current Sense Amplifier With Enhanced PWM Rejection, 20V/V gain, bandwidth 400kHz, VS=2.7V~5.5V, SOIC-8 (pin compatible with AD8418)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -66,7 +66,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "highside HS current sense amplifier linear"
+			(property "ki_keywords" "current sense amplifier bidirectional PWM rejection motor inline"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -77,7 +77,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* MSOP*3x3mm*P0.65mm*"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -88,7 +88,7 @@
 					)
 				)
 			)
-			(symbol "AD8418_0_1"
+			(symbol "INA240A1D_0_1"
 				(rectangle
 					(start -7.62 7.62)
 					(end 7.62 -7.62)
@@ -101,7 +101,7 @@
 					)
 				)
 			)
-			(symbol "AD8418_1_1"
+			(symbol "INA240A1D_1_1"
 				(pin input line
 					(at 5.08 10.16 270)
 					(length 2.54)
@@ -2149,7 +2149,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Amplifier_Current:AD8418")
+		(lib_id "Logic_My:INA240A1D")
 		(at 143.51 109.22 0)
 		(unit 1)
 		(body_style 1)
@@ -2192,7 +2192,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8418.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina240.pdf"
 			(at 160.02 127 0)
 			(hide yes)
 			(show_name no)
@@ -2203,7 +2203,7 @@
 				)
 			)
 		)
-		(property "Description" "70V Bidirectional, Zero Drift, Current Sense Amplifier, 20V/V gain, bandwidth 250kHz, VS=2.7V~5.5V, SOIC-8/MSOP-8"
+		(property "Description" "-4...80V Bidirectional, Zero Drift, Current Sense Amplifier With Enhanced PWM Rejection, 20V/V gain, bandwidth 400kHz, VS=2.7V~5.5V, SOIC-8 (pin compatible with AD8418)"
 			(at 143.51 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -2214,7 +2214,7 @@
 				)
 			)
 		)
-		(property "Product Name" "AD8418"
+		(property "Product Name" "INA240A1DR"
 			(at 143.51 109.22 0)
 			(hide yes)
 			(show_name no)
