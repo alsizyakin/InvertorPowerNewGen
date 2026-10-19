@@ -8,7 +8,9 @@
 #  6. octo.py          owner 2026-10-19: every track at 0 / 45 / 90 degrees
 #  7. lay_P4c.py       owner 2026-10-19: VDC to J6 from the top band, In1 through passage C; thermistor C lines on In1
 #  8. sch_rev01_f.py   owner 2026-10-19: U4, U9, U12 AD8418 -> INA240A1 (pin to pin)
-#  9. kicad-cli        refill zones, save, DRC with schematic parity (run_drc.sh on a copy, then copy the board back)
+#  9. lay_P4d.py       current spreading (cflow.py): thermistor A lines off the shunt approach, vias at R52.2,
+#                      stitching vias VDC / GND / node C
+# 10. kicad-cli        refill zones, save, DRC with schematic parity (run_drc.sh on a copy, then copy the board back)
 set -e
 P=$(cd "$1" && pwd); T=$(cd "$(dirname "$0")" && pwd); TMP=$(mktemp -d)
 python3 -B "$T/stretch.py" "$P/Power.kicad_pcb" "$TMP/s1.kicad_pcb" 72 4
@@ -19,4 +21,5 @@ python3 -B "$T/lay_P4b.py" "$P/Power.kicad_pcb"
 python3 -B "$T/octo.py" "$P/Power.kicad_pcb" "$T"
 python3 -B "$T/lay_P4c.py" "$P/Power.kicad_pcb"
 python3 -B "$T/sch_rev01_f.py" "$P"
+python3 -B "$T/lay_P4d.py" "$P/Power.kicad_pcb"
 rm -rf "$TMP"
