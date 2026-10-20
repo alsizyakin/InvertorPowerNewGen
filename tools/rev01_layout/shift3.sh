@@ -15,7 +15,8 @@
 #  6-14.               as plus4.sh steps 6-15: octo, lay_P4c, sch_f, lay_P4d (STRIP_DY=3), lay_P4e, sch_g / lay_P4f,
 #                      sch_h / lay_P4g (SNUB2X=0, STRIP_DY=3), lay_P4h
 # 15. lay_S3c.py       the bottom edge 3 mm up (board length as rev0.1-gnd); U7 to B.Cu, the U6 input parts up
-# 16. kicad-cli        refill zones, save, DRC with schematic parity (run_drc.sh on a copy, then copy the board back)
+# 16. lay_S3d.py       HO / SW pairs of phases C and B on In4 at 0.25 mm; one track width per net (not power nets)
+# 17. kicad-cli        refill zones, save, DRC with schematic parity (run_drc.sh on a copy, then copy the board back)
 set -e
 P=$(cd "$1" && pwd); T=$(cd "$(dirname "$0")" && pwd); TMP=$(mktemp -d)
 STRETCH_YEDGE=67.9 python3 -B "$T/stretch.py" "$P/Power.kicad_pcb" "$TMP/s1.kicad_pcb" 72 3
@@ -33,5 +34,6 @@ python3 -B "$T/lay_P4f.py" "$P/Power.kicad_pcb" "$T"
 SNUB2X=0 python3 -B "$T/sch_rev01_h.py" "$P" "$T"
 STRIP_DY=3 python3 -B "$T/lay_P4g.py" "$P/Power.kicad_pcb" "$T"
 python3 -B "$T/lay_P4h.py" "$P/Power.kicad_pcb"
-[ -f "$T/lay_S3c.py" ] && python3 -B "$T/lay_S3c.py" "$P/Power.kicad_pcb" "$T"
+python3 -B "$T/lay_S3c.py" "$P/Power.kicad_pcb" "$T"
+python3 -B "$T/lay_S3d.py" "$P/Power.kicad_pcb"
 rm -rf "$TMP"
