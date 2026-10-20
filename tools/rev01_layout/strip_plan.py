@@ -1,7 +1,7 @@
 """+4 mm board: plan of the strip between the bulk caps and the block (y ~65.5...75), per phase:
   CER x2  : C1206 VDC-GND (05 P1), pad 1 on the VDC F.Cu fill, pad 2 with two GND vias at the pad (In1/In3 GND);
-  LS chain: node - C0805 = island = R0612 - GND (05 P2: pads end to end, middle = short wide copper, no track);
-  HS chain: VDC - C0805 = island = R0612 - node;
+  LS chain: node - C0805 = island = R - GND (05 P2: pads end to end, middle = short wide copper, no track);
+  HS chain: VDC - C0805 = island = R - node; R by env RKIND: R0612 (default; also 2 x 0805 on 0612 pads), R0805, R1206;
   C0603 x2: the rev0 0603s C90, C92...C96, two per phase, pad 1 on VDC, pad 2 with one GND via.
 Terminal pads must lie in the F.Cu fill of their net. Exposed pads keep 0.5 mm from other-net copper (P5), vias 0.2 from
 tracks/vias and 0.5 from other-net exposed pads; courtyards must not overlap (bulk caps: circle r 5.25).
@@ -28,7 +28,12 @@ PH = {"C": dict(x0=116.2, x1=float(os.environ.get("XC1", "134.3")), node="/Curre
 inside = lambda P, r: r[0] >= P["x0"] - 1e-6 and r[2] <= P["x1"] + 1e-6
 # local models at rot 0: pad offset along x, pad w, pad h, courtyard half-sizes
 M = {"C1206": (1.5625, 1.325, 1.8, 2.48, 1.15), "C0805": (1.0375, 1.175, 1.45, 1.88, 0.985),
-     "R0612": (0.8375, 1.175, 3.4, 1.68, 1.95), "C0603": (0.8625, 1.075, 0.95, 1.65, 0.73)}
+     "R0612": (0.8375, 1.175, 3.4, 1.68, 1.95), "C0603": (0.8625, 1.075, 0.95, 1.65, 0.73),
+     "R0805": (0.9125, 1.025, 1.4, 1.68, 0.95), "R1206": (1.4625, 1.05, 1.75, 2.28, 1.12)}
+M["C0805S"] = (0.95, 1.0, 1.45, 1.7, 0.98)  # C_0805_2012Metric (standard pads)
+M["R1206H"] = (1.55, 1.3, 1.75, 2.45, 1.12)   # R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
+RK = os.environ.get("RKIND", "R0612")      # snubber R: R0612 (= 2 x 0805 side by side on the 0612 pads), R0805, R1206
+CK = os.environ.get("CKIND", "C0805")      # snubber C: C0805 (HandSolder pads, as on the board) or C0805S (standard)
 
 # ---------------------------------------------------------------- board model
 fills = collections.defaultdict(list)
@@ -170,6 +175,8 @@ def cer_cands(kind, P, nvias, free=False):
             l2 = (pads[1][3]-pads[1][1]) if abs(ux) > 0.5 else (pads[1][2]-pads[1][0])      # across
             e = w2/2 + 0.32; vx, vy = -uy, ux
             opts = []
+            if kind == "C0603" and os.environ.get("C06FILL") == "1" and term_in(pads[1], "GND"):
+                opts.append([])                                  # pad 2 on the GND F.Cu fill (LS source copper): no via
             if nvias == 2:
                 s = min(0.45, l2/2 - 0.05)
                 opts.append([(p2[0]+ux*e+vx*s, p2[1]+uy*e+vy*s), (p2[0]+ux*e-vx*s, p2[1]+uy*e-vy*s)])
@@ -195,12 +202,12 @@ def chain_cands(P, typ):
     # schematic order (§5): LS node - C - X - R - GND, HS VDC - C - X - R - node: R terminal nA, C terminal nB
     if typ == "LS": nA, nB, tA, tB = "GND", P["node"], pads_of(P["ls"], "GND"), pads_of(P["ls"], P["node"])
     else: nA, nB, tA, tB = P["node"], "VDC", pads_of(P["hs"], P["node"]), pads_of(P["hs"], "VDC")
-    D = M["R0612"][3] + M["C0805"][3] + 0.02; DL = M["R0612"][3] + M["C0805"][4] + 0.02
+    D = M[RK][3] + M[CK][3] + 0.02; DL = M[RK][3] + M[CK][4] + 0.02
     res = []
     for x, y in grid(P["x0"] - 4, P["x1"] + 4):
         for d in (0, 90, 180, 270):
             ux, uy = U4[d]
-            rp, rc = part("R0612", x, y, d)                      # R pad 2 (towards C) = middle
+            rp, rc = part(RK, x, y, d)                           # R pad 2 (towards C) = middle
             if not (inside(P, rc) and crt_ok(rc)): continue
             if not (term_in(rp[0], nA, need=2) and pad_ok(rp[0], nA) and pad_ok(rp[1], None)): continue
             rm = ctr(rp[1])
@@ -208,8 +215,8 @@ def chain_cands(P, typ):
             for shp, cr, k in shapes:
                 wx, wy = U4[cr]
                 if shp == "I": cx, cy = x + ux*D, y + uy*D
-                else: cx, cy = x + ux*DL + wx*(M["C0805"][0] + k), y + uy*DL + wy*(M["C0805"][0] + k)
-                cp, cc = part("C0805", cx, cy, cr)               # C pad 1 = middle, pad 2 = terminal
+                else: cx, cy = x + ux*DL + wx*(M[CK][0] + k), y + uy*DL + wy*(M[CK][0] + k)
+                cp, cc = part(CK, cx, cy, cr)                    # C pad 1 = middle, pad 2 = terminal
                 if not (inside(P, cc) and crt_ok(cc) and not ov(cc, rc)): continue
                 if not (term_in(cp[1], nB, need=2) and pad_ok(cp[1], nB) and pad_ok(cp[0], None)): continue
                 if geom.d_rect_rect(cp[1], rp[0]) < CL_PAD or geom.d_rect_rect(cp[1], rp[1]) < CL_MID: continue
@@ -259,7 +266,7 @@ srt = lambda c: sorted(c, key=lambda r: r["score"])
 def search(pools, wts, miss, kmax):
     best = [None, None]
     n = len(pools)
-    lb = [sum(w*(pl[0]["score"] if pl else m) for pl, w, m in zip(pools[k:], wts[k:], miss[k:])) for k in range(n)] + [0]
+    lb = [sum(min(w*pl[0]["score"], m) if pl else m for pl, w, m in zip(pools[k:], wts[k:], miss[k:])) for k in range(n)] + [0]
     def dfs(i, chosen, sc):
         if best[0] is not None and sc + lb[i] >= best[0]: return
         if i == n:
@@ -281,15 +288,20 @@ def keep(ph, names, items):
         print(f"  {ph} {nm}: " + ", ".join(f"{k}={v}" for k, v in plan[ph][nm].items() if k not in ("nets", "kind", "rnet", "cnet", "bridge")), flush=True)
 # pass 1, per phase inside its slice: LS and HS snubber chains and the first 1206 at the HS drain
 for ph, P in PH.items():
-    LS = diverse(chain_cands(P, "LS"), NCH); HS = diverse(chain_cands(P, "HS"), NCH); C12 = srt(cer_cands("C1206", P, 2))
+    LS = diverse(chain_cands(P, "LS"), NCH); HS = diverse(chain_cands(P, "HS"), NCH); C12 = [] if os.environ.get("NOCER1") == "1" else srt(cer_cands("C1206", P, 2))
     print(f"{ph}: LS {len(LS)} {[c['score'] for c in LS[:3]]}; HS {len(HS)} {[c['score'] for c in HS[:3]]}; 1206 {len(C12)}", flush=True)
-    keep(ph, ["LS", "HS", "CER1"], search([LS, HS, C12], [1.0, 1.0, float(os.environ.get("WCER", "1.5"))], [50, 30, 50], [999, 999, K]))
+    miss = [float(v) for v in os.environ.get("MISS", "50,30,50").split(",")]     # cost of leaving out LS, HS, CER1
+    if ph in os.environ.get("JOINT06", "").split(","):   # the phase's two 0603s chosen together with its chains (in the slice)
+        C06 = srt(cer_cands("C0603", P, 1))
+        keep(ph, ["LS", "HS", "C06a", "C06b"], search([LS, HS, C06, C06], [1.0, 1.0, 1.0, 1.0], miss[:2] + [50.0, 50.0], [999, 999, K, K]))
+        continue
+    keep(ph, ["LS", "HS", "CER1"], search([LS, HS, C12], [1.0, 1.0, float(os.environ.get("WCER", "1.5"))], miss, [999, 999, K]))
 # pass 2, inside the phase slice: the second 1206 of each phase, nearest to that phase's HS drain (on the VDC
 # ribbon over In1 GND in 0.1 mm any place of the slice is a low-inductance branch, 05 P1)
 for ph, P in (() if os.environ.get("NOCER2") == "1" else PH.items()):
     keep(ph, ["CER2"], search([srt(cer_cands("C1206", P, 2, free=os.environ.get("CER2FREE") == "1"))], [1.0], [99], [1]))
 # pass 3: the rev0 0603s, two per phase, nearest to the phase's HS drain
-for ph, P in PH.items():
+for ph, P in [(ph, P) for ph, P in PH.items() if ph not in os.environ.get("JOINT06", "").split(",")]:
     C06 = srt(cer_cands("C0603", P, 1, free=True))
     keep(ph, ["C06a", "C06b"], search([C06, C06], [1.0, 1.0], [99, 99], [K, K]))
 json.dump(plan, open(out, "w"), indent=1)

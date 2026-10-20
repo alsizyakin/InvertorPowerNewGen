@@ -1,0 +1,302 @@
+{
+ "C": {
+  "LS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 119.2,
+   "y": 72.9,
+   "rot": 0,
+   "cx": 122.65,
+   "cy": 72.85,
+   "crot": 270,
+   "bridge": [
+    [
+     120.75,
+     71.9
+    ],
+    [
+     122.65,
+     71.9
+    ]
+   ],
+   "rnet": "GND",
+   "cnet": "/Current_Sensor_3/Phase_IN",
+   "nets": [
+    "GND",
+    "X",
+    "X",
+    "/Current_Sensor_3/Phase_IN"
+   ],
+   "score": 2.11,
+   "dR": 1.86,
+   "dC": 0.25,
+   "vias": []
+  },
+  "HS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 126.4,
+   "y": 72.9,
+   "rot": 0,
+   "cx": 129.85,
+   "cy": 72.85,
+   "crot": 270,
+   "bridge": [
+    [
+     127.95,
+     71.9
+    ],
+    [
+     129.85,
+     71.9
+    ]
+   ],
+   "rnet": "/Current_Sensor_3/Phase_IN",
+   "cnet": "VDC",
+   "nets": [
+    "/Current_Sensor_3/Phase_IN",
+    "X",
+    "X",
+    "VDC"
+   ],
+   "score": 2.45,
+   "dR": 2.21,
+   "dC": 0.25,
+   "vias": []
+  },
+  "C06a": {
+   "kind": "C0603",
+   "x": 132.5,
+   "y": 73.8,
+   "rot": 0,
+   "vias": [
+    [
+     134.22,
+     73.8
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 1.27
+  },
+  "C06b": {
+   "kind": "C0603",
+   "x": 132.5,
+   "y": 72.3,
+   "rot": 0,
+   "vias": [
+    [
+     134.22,
+     72.3
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 2.47
+  }
+ },
+ "B": {
+  "LS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 137.1,
+   "y": 72.9,
+   "rot": 0,
+   "cx": 140.55,
+   "cy": 72.85,
+   "crot": 270,
+   "bridge": [
+    [
+     138.65,
+     71.9
+    ],
+    [
+     140.55,
+     71.9
+    ]
+   ],
+   "rnet": "GND",
+   "cnet": "/Current_Sensor_2/Phase_IN",
+   "nets": [
+    "GND",
+    "X",
+    "X",
+    "/Current_Sensor_2/Phase_IN"
+   ],
+   "score": 1.82,
+   "dR": 1.57,
+   "dC": 0.25,
+   "vias": []
+  },
+  "HS": {
+   "kind": "chain",
+   "shape": "I",
+   "x": 144.1,
+   "y": 73.2,
+   "rot": 0,
+   "cx": 148.27,
+   "cy": 73.2,
+   "crot": 0,
+   "bridge": [
+    [
+     145.65,
+     73.2
+    ],
+    [
+     147.32,
+     73.2
+    ]
+   ],
+   "rnet": "/Current_Sensor_2/Phase_IN",
+   "cnet": "VDC",
+   "nets": [
+    "/Current_Sensor_2/Phase_IN",
+    "X",
+    "X",
+    "VDC"
+   ],
+   "score": 2.69,
+   "dR": 1.53,
+   "dC": 1.17,
+   "vias": []
+  },
+  "C06a": {
+   "kind": "C0603",
+   "x": 150.7,
+   "y": 72.9,
+   "rot": 90,
+   "vias": [
+    [
+     150.7,
+     71.18
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 2.77
+  },
+  "C06b": {
+   "kind": "C0603",
+   "x": 153.1,
+   "y": 71.2,
+   "rot": 0,
+   "vias": [
+    [
+     154.82,
+     71.2
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 5.71
+  }
+ },
+ "A": {
+  "LS": {
+   "kind": "chain",
+   "shape": "I",
+   "x": 154.1,
+   "y": 73.1,
+   "rot": 0,
+   "cx": 158.27,
+   "cy": 73.1,
+   "crot": 0,
+   "bridge": [
+    [
+     155.65,
+     73.1
+    ],
+    [
+     157.32,
+     73.1
+    ]
+   ],
+   "rnet": "GND",
+   "cnet": "/Current_Sensor_1/Phase_IN",
+   "nets": [
+    "GND",
+    "X",
+    "X",
+    "/Current_Sensor_1/Phase_IN"
+   ],
+   "score": 2.8,
+   "dR": 1.37,
+   "dC": 1.43,
+   "vias": []
+  },
+  "HS": {
+   "kind": "chain",
+   "shape": "L",
+   "x": 162.5,
+   "y": 72.9,
+   "rot": 0,
+   "cx": 165.95,
+   "cy": 72.85,
+   "crot": 270,
+   "bridge": [
+    [
+     164.05,
+     71.9
+    ],
+    [
+     165.95,
+     71.9
+    ]
+   ],
+   "rnet": "/Current_Sensor_1/Phase_IN",
+   "cnet": "VDC",
+   "nets": [
+    "/Current_Sensor_1/Phase_IN",
+    "X",
+    "X",
+    "VDC"
+   ],
+   "score": 2.12,
+   "dR": 1.57,
+   "dC": 0.55,
+   "vias": []
+  },
+  "C06a": {
+   "kind": "C0603",
+   "x": 167.7,
+   "y": 72.9,
+   "rot": 90,
+   "vias": [
+    [
+     168.495,
+     72.038
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 2.77
+  },
+  "C06b": {
+   "kind": "C0603",
+   "x": 143.5,
+   "y": 71.3,
+   "rot": 0,
+   "vias": [
+    [
+     145.22,
+     71.3
+    ]
+   ],
+   "nets": [
+    "VDC",
+    "GND"
+   ],
+   "score": 22.21
+  }
+ }
+}

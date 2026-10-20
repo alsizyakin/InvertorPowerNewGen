@@ -52,7 +52,8 @@ for ref in ("C135", "C136", "H5"): out[ref] = "/" + uuid_of(p.s, ref)
 q = Sch(os.path.join(D, "Phase_A.kicad_sch"))
 INST = {"LS": (("R100", "R124"), ("R101", "R125"), ("R102", "R126"), 113.03),
         "HS": (("R103", "R127"), ("R104", "R128"), ("R105", "R129"), 81.28)}
-if '(reference "R124")' not in q.s:
+SNUB2X = os.environ.get("SNUB2X", "1") == "1"      # rev0.1-shift3: one 1206 per snubber (sch_rev01_s3.py), no 2 x 0805
+if SNUB2X and '(reference "R124")' not in q.s:
     for side, (*pairs, Y) in INST.items():
         X0, X = 135.89, 140.97
         i = q.s.find(f'(reference "{pairs[0][0]}")'); a = q.s.rfind("\n\t(symbol\n", 0, i)
@@ -65,6 +66,6 @@ if '(reference "R124")' not in q.s:
         for dy in (-2.54, 2.54):
             q.wire(X0, Y + dy, X, Y + dy); q.junction(X0, Y + dy)
     q.save()
-for side, (*pairs, Y) in INST.items(): out[f"Rsn_{side}"] = uuid_of(q.s, pairs[0][1])
+for side, (*pairs, Y) in (INST.items() if SNUB2X else ()): out[f"Rsn_{side}"] = uuid_of(q.s, pairs[0][1])
 json.dump(out, open(os.path.join(sys.argv[2], "data", "sch_h_uuids.json"), "w"), indent=1)
-print("schematic: H5 CHASSIS, C135 / C136 Y DNP; snubber R 2 x 0805 1 Ohm (R100-R105 + R124-R129)")
+print("schematic: H5 CHASSIS, C135 / C136 Y DNP" + ("; snubber R 2 x 0805 1 Ohm (R100-R105 + R124-R129)" if SNUB2X else ""))

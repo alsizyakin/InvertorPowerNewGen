@@ -17,6 +17,8 @@ SNUB = {"C": {"LS": ("C112", "R100"), "HS": ("C115", "R103")}, "B": {"LS": ("C11
 CER = {"C": ("C124", "C125", "C126"), "B": ("C128", "C129", "C130"), "A": ("C132", "C133", "C134")}
 C06 = {"C": ("C94", "C92"), "B": ("C93", "C90"), "A": ("C95", "C96")}
 R0612 = "Resistor_SMD:R_0612_1632Metric_Pad1.18x3.40mm_HandSolder"
+S3 = os.environ.get("STRIP_S3") == "1"     # branch rev0.1-shift3 (3 mm strip): R stays 1206, C gets standard 0805 pads, no new 1206
+C0805S = "Capacitor_SMD:C_0805_2012Metric"
 U = {0: (1, 0), 90: (0, -1), 180: (-1, 0), 270: (0, 1)}
 OFF = {"R0612": 0.8375, "C0805": 1.0375, "C1206": 1.5625, "C0603": 0.8625}
 
@@ -53,8 +55,12 @@ for ph, items in plan.items():
         if not it: print(ph, typ, "not placed"); continue
         cref, rref = SNUB[ph][typ]; d = it["rot"]
         B.move_fp(rref, it["x"], it["y"], 0)
-        B.s = fplib.swap_geometry(B.s, rref, R0612)
-        B.s = fplib.set_attr(B.s, rref, value="0.47", pn="Resistor SMD 0612 1.5W")
+        if S3:
+            B.s = fplib.set_attr(B.s, rref, value="0.47", pn="Resistor SMD 1206 anti-surge 0.5W")
+            B.move_fp(cref, it["cx"], it["cy"], 0); B.s = fplib.swap_geometry(B.s, cref, C0805S)
+        else:
+            B.s = fplib.swap_geometry(B.s, rref, R0612)
+            B.s = fplib.set_attr(B.s, rref, value="0.47", pn="Resistor SMD 0612 1.5W")
         # schematic: C pad 1 = terminal, pad 2 = middle; R pad 1 = middle, pad 2 = terminal -> both turned by 180
         B.move_fp(rref, it["x"], it["y"], (d + 180) % 360)
         B.move_fp(cref, it["cx"], it["cy"], (it["crot"] + 180) % 360)
@@ -66,7 +72,7 @@ for ph, items in plan.items():
         print(f"{ph} {typ} ({it['shape']}): {cref} ({it['cx']}, {it['cy']}) rot {(it['crot'] + 180) % 360}, {rref} ({it['x']}, {it['y']}) rot {(d + 180) % 360}; "
               f"terminal to pins R {it['dR']} / C {it['dC']} mm")
     src, n1, n2 = CER[ph]
-    for nm, ref in (("CER1", n1), ("CER2", n2)):
+    for nm, ref in (() if S3 else (("CER1", n1), ("CER2", n2))):
         it = items.get(nm)
         if not it: print(ph, nm, "not placed"); continue
         B.s = fplib.clone_fp(B.s, src, ref, uu[ref], pad_nets={"1": "VDC", "2": "GND"})

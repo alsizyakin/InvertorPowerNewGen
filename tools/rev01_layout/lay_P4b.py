@@ -17,14 +17,16 @@ def fmt(v):
     t = f"{v:.4f}".rstrip("0").rstrip("."); return t if t not in ("-0", "") else "0"
 
 # ---------------------------------------------------------------- F12
+S3 = os.environ.get("STRIP_S3") == "1"     # rev0.1-shift3: the two +4 mm specific shifts below do not apply; VDC zones from y 72.0
 DY_A = -0.06
-for ref in ("R102", "C114"):
+for ref in (() if S3 else ("R102", "C114")):
     f = G.fps[ref]; B.move_fp(ref, f.x, f.y + DY_A, f.rot)
-g = [g for g in B.segments("Net-(C114-Pad2)", "F.Cu")]; assert len(g) == 1; g = g[0]
-B.replace_seg(g, pcbedit.seg_text(g["x1"], g["y1"] + DY_A, g["x2"], g["y2"] + DY_A, g["w"], "F.Cu", g["net"], g["uuid"]))
-nv = B.del_vias(lambda v: v["net"] == "GND" and abs(v["x"] - 119.75) < 0.01 and abs(v["y"] - 74.85) < 0.01)
-assert nv == 1
-B.add_via((119.35, 75.05), "GND")
+if not S3:
+    g = [g for g in B.segments("Net-(C114-Pad2)", "F.Cu")]; assert len(g) == 1; g = g[0]
+    B.replace_seg(g, pcbedit.seg_text(g["x1"], g["y1"] + DY_A, g["x2"], g["y2"] + DY_A, g["w"], "F.Cu", g["net"], g["uuid"]))
+    nv = B.del_vias(lambda v: v["net"] == "GND" and abs(v["x"] - 119.75) < 0.01 and abs(v["y"] - 74.85) < 0.01)
+    assert nv == 1
+    B.add_via((119.35, 75.05), "GND")
 for c in ("C112", "C113", "C114", "C115", "C116", "C117"): B.s = fplib.set_pad_clearance(B.s, c, {"2": 0.5})
 for r in ("R100", "R101", "R102", "R103", "R104", "R105"): B.s = fplib.set_pad_clearance(B.s, r, {"1": 0.5})
 
@@ -37,7 +39,8 @@ def zone_text(net, layer, prio, pts):
             f'\t\t\t(island_removal_mode 0)\n\t\t)\n\t\t(polygon\n\t\t\t(pts\n\t\t\t\t{xy}\n\t\t\t)\n\t\t)\n\t)\n')
 new_z = ""
 for x0, x1 in ((121.85, 129.5), (138.85, 146.5), (155.85, 163.5)):     # GND strips end at 121.25 / 138.25 / 155.25
-    new_z += zone_text("VDC", "B.Cu", 9, [(x0, 71.0), (x1, 71.0), (x1, 73.65), (x0, 73.65)])   # node zones start at 74.25
+    yt = 72.0 if S3 else 71.0
+    new_z += zone_text("VDC", "B.Cu", 9, [(x0, yt), (x1, yt), (x1, 73.65), (x0, 73.65)])   # node zones start at 74.25
 B.save()
 s = open(fn, encoding="utf-8").read()
 k = s.find("\n\t(zone\n") + 1

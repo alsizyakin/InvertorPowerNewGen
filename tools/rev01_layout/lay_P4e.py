@@ -48,7 +48,8 @@ def a_outline(top, corner):
     tail = [(157.25, 104.25), (157.25, 100.75), (157.25, 94.0), (157.0, 94.0), (155.25, 92.25), (155.25, top), (162.5, top)]
     mid = [(169.0, 98.25), (169.0, 104.25), (163.75, 104.25)] if corner else [(163.5, 98.25), (163.5, 104.25)]
     return head + mid + tail
-for line, top in (('(layer "F.Cu")', 71.25), ('(layer "B.Cu")', 74.25), ('(layers "In1.Cu" "In2.Cu")', 74.25)):
+YT = float(os.environ.get("STRIP_YT", "71.25"))     # top of the F.Cu node zones (stretch_zones.py): 72.25 on rev0.1-shift3
+for line, top in (('(layer "F.Cu")', YT), ('(layer "B.Cu")', 74.25), ('(layers "In1.Cu" "In2.Cu")', 74.25)):
     s = set_outline(s, NA, line, a_outline(top, True), a_outline(top, False))
 # ---------------------------------------------------------------- phase C pocket
 NC = "/Current_Sensor_3/Phase_IN"

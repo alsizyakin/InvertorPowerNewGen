@@ -1526,7 +1526,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f4fe14f2-6bb0-44c8-8f38-dce63035eada")
+		(uuid "9c199c52-3990-438a-9e00-4d3a3a039ac8")
 		(property "Reference" "#PWR219"
 			(at 146.05 123.19 0)
 			(hide yes)
@@ -1582,7 +1582,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "83834631-baeb-485a-84e5-1bbf92fe35eb")
+			(uuid "1be3b067-1a8d-4221-961d-a84f8e519a8e")
 		)
 		(instances
 			(project "Power"

@@ -3,6 +3,19 @@ import re, math, sys
 sys.path.insert(0, "/home/alexey/Git/KiCad/InvertorPowerNewGen/bench_2026-10-13/tools"); sys.dont_write_bytecode = True
 import kpcb
 
+def _arc_pts(p0, pm, p1, n=16):
+    """points along the arc start - mid - end"""
+    (ax, ay), (bx, by), (cx, cy) = p0, pm, p1
+    d = 2*(ax*(by - cy) + bx*(cy - ay) + cx*(ay - by))
+    if abs(d) < 1e-12: return [p0, p1]
+    ux = ((ax*ax + ay*ay)*(by - cy) + (bx*bx + by*by)*(cy - ay) + (cx*cx + cy*cy)*(ay - by))/d
+    uy = ((ax*ax + ay*ay)*(cx - bx) + (bx*bx + by*by)*(ax - cx) + (cx*cx + cy*cy)*(bx - ax))/d
+    r = math.hypot(ax - ux, ay - uy)
+    t0, tm, t1 = (math.atan2(q[1] - uy, q[0] - ux) for q in (p0, pm, p1))
+    sweep = (t1 - t0) % (2*math.pi)
+    if (tm - t0) % (2*math.pi) > sweep: sweep -= 2*math.pi
+    return [(ux + r*math.cos(t0 + sweep*k/n), uy + r*math.sin(t0 + sweep*k/n)) for k in range(n + 1)]
+
 def _blocks(s, tag, indent="\t"):
     for m in re.finditer(r'\n' + indent + r'\(' + tag + r'\b', s):
         i = m.start() + 1 + len(indent); d = 0
@@ -100,7 +113,15 @@ class Board:
         self.edge = []
         for g in [s[a:b] for a, b in list(_blocks(s, "gr_line")) + list(_blocks(s, "gr_arc")) if '"Edge.Cuts"' in s[a:b]]:
             pts = [(float(u), float(v)) for u, v in re.findall(r'\((?:start|mid|end) ([\d.\-]+) ([\d.\-]+)\)', g)]
+            if len(pts) == 3: pts = _arc_pts(*pts)           # arcs: 16 chords (two chords were up to 0.2 mm off)
             for i in range(len(pts) - 1): self.edge.append((pts[i][0], pts[i][1], pts[i+1][0], pts[i+1][1]))
+        for a, b in _blocks(s, "gr_curve"):                 # Bezier edges (the shoulders), 16 chords; were left out
+            if '"Edge.Cuts"' not in s[a:b]: continue
+            c = [(float(u), float(v)) for u, v in re.findall(r'\(xy ([\d.\-]+) ([\d.\-]+)\)', s[a:b])]
+            if len(c) != 4: continue
+            pts = [tuple((1-t)**3*c[0][k] + 3*(1-t)**2*t*c[1][k] + 3*(1-t)*t*t*c[2][k] + t**3*c[3][k] for k in (0, 1))
+                   for t in (i/16 for i in range(17))]
+            for i in range(16): self.edge.append((pts[i][0], pts[i][1], pts[i+1][0], pts[i+1][1]))
 
     def check(self, ref, x, y, rot, moved=None, cl=0.2, crt_gap=0.0, ignore_refs=(), extra_vias=(), extra_segs=(), shrink=0.25):
         """Violations of footprint `ref` placed at (x, y, rot) against the board (and other moved footprints)."""

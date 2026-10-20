@@ -26,6 +26,10 @@ if '(property "Reference" "C134"' not in s:
     uid = json.load(open(os.path.join(T, "data", "sch_g_uuids.json")))["C134"]
     s = fplib.clone_fp(s, "C112", "C134", uid, sheetname="/", value="100n 100V X7R", pad_nets={"1": "VDC", "2": "GND"})
     s = fplib.set_attr(s, "C134", pn="Capacitor SMD 100V X7R", dnp=False)
+    HS0805 = "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"     # C112 has standard pads on rev0.1-shift3
+    if f'(footprint "{HS0805}"' not in s[slice(*pcbedit._fp_span(s, "C134"))][:200]:
+        open(fn, "w", encoding="utf-8").write(s); Bx = pcbedit.Board(fn); Bx.move_fp("C134", 0, 0, 0); Bx.save()
+        s = fplib.swap_geometry(open(fn, encoding="utf-8").read(), "C134", HS0805)
     a, b = pcbedit._fp_span(s, "C134"); blk = s[a:b]
     blk = re.sub(r'\(sheetfile "[^"]*"\)', '(sheetfile "Power.kicad_sch")', blk, count=1)
     for name in ("Description", "Datasheet", "Product Name", "Replacement", "Function"):

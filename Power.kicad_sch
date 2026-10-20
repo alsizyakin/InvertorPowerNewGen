@@ -11187,7 +11187,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp yes)
-		(uuid "cf6c91bb-dd99-42dd-884b-f734a25d2bf2")
+		(uuid "f8f22195-3321-485f-9c92-8bce0166b330")
 		(property "Reference" "C135"
 			(at 368.3 213.995 0)
 			(show_name no)
@@ -11255,10 +11255,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "107850de-cb63-45ad-a159-1845a745bea0")
+			(uuid "308ed35d-7b70-43bd-994b-1a0a6f1040d6")
 		)
 		(pin "2"
-			(uuid "c33d0de6-0e5e-43fa-94a7-d396ccf5f9bd")
+			(uuid "b45d5fb0-2cd4-4a9f-a759-7da65118ede1")
 		)
 		(instances
 			(project "Power"
@@ -11279,7 +11279,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0b5603ea-9ce7-4352-a2fb-c21db625976d")
+		(uuid "932cccf9-f6d2-43f3-8628-39a5a72c851b")
 		(property "Reference" "#PWR223"
 			(at 365.76 208.28 0)
 			(hide yes)
@@ -11335,7 +11335,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "f9149db7-7cc5-4f68-ab16-2c81fb446625")
+			(uuid "c90bb138-ae9d-4bee-a6bc-45284823f2e2")
 		)
 		(instances
 			(project "Power"
@@ -11354,7 +11354,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6e8d0001-c290-438f-9a72-be6aafcec483")
+		(uuid "5b893f04-3fcc-482b-a0bb-73ec9f00981b")
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -11366,7 +11366,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp yes)
-		(uuid "a0b4e167-4648-4906-8841-0e541a96abed")
+		(uuid "934f3b55-0f59-45fb-a14e-d27fcb06b954")
 		(property "Reference" "C136"
 			(at 383.54 213.995 0)
 			(show_name no)
@@ -11434,10 +11434,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "0109bdfd-aafc-4143-b97b-2f3b9f9fd81b")
+			(uuid "b7ff724b-bd17-4c25-9f17-631ea2caada3")
 		)
 		(pin "2"
-			(uuid "e0229322-487a-4f8a-9c73-488ecdb3c15a")
+			(uuid "0ae3e57b-8890-43b2-917d-489b88283d76")
 		)
 		(instances
 			(project "Power"
@@ -11458,7 +11458,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "012a18c1-d705-46ba-b4f7-fc70d1df4b3d")
+		(uuid "ffd78cab-4722-4c58-9f75-c1f095150022")
 		(property "Reference" "#PWR224"
 			(at 381 205.74 0)
 			(hide yes)
@@ -11514,7 +11514,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6797ece2-57dc-4aa9-8a2c-191cb931a715")
+			(uuid "6615466b-2d3e-4a4b-ab0a-983f2b1ba0a0")
 		)
 		(instances
 			(project "Power"
@@ -11533,7 +11533,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "822b049b-d405-4769-96c1-84bdac11b2ea")
+		(uuid "10b46ed2-131a-44c5-8f87-abc893d93aa9")
 	)
 	(wire
 		(pts
@@ -11543,7 +11543,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0a1f7cde-4001-42ea-b80f-b4811d9962c4")
+		(uuid "0e18ef79-9ca2-4259-b80f-b8164b4dff87")
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole_Pad")
@@ -11555,7 +11555,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5dc1104a-a2d6-4fa7-aaf0-dee4a4c79460")
+		(uuid "eedef0a6-55dd-4068-9e78-f0beba96d019")
 		(property "Reference" "H5"
 			(at 375.92 217.17 0)
 			(show_name no)
@@ -11612,7 +11612,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "6b7c2d84-41e3-4b72-874b-ab8ef74df7a9")
+			(uuid "855fa4f3-e153-4479-9e95-403a6199aa81")
 		)
 		(instances
 			(project "Power"
@@ -11627,7 +11627,7 @@
 		(at 373.38 222.25)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "21ab641a-76e3-4c35-821b-443d2663dd62")
+		(uuid "25de2be3-46c3-42f5-8a2f-eafeb2d55cee")
 	)
 	(label "CHASSIS"
 		(at 367.03 222.25 0)
@@ -11637,7 +11637,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "581ac25e-a967-48e9-827e-e4ed9d7fa6d4")
+		(uuid "7cbbd19c-c072-419e-a72c-c7e49edca459")
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -11649,7 +11649,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "473848b7-f8bb-4308-a8aa-30a6dc408e2b")
+		(uuid "eb4bcf02-0e79-45a0-873b-0bd0d4b6e36f")
 		(property "Reference" "C134"
 			(at 307.34 210.185 0)
 			(show_name no)
@@ -11717,10 +11717,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d9a245d9-fa1f-4faa-b90b-fc7dff1ed261")
+			(uuid "050f2354-4c45-4a2e-9fbf-6e53163c78a6")
 		)
 		(pin "2"
-			(uuid "e237bd92-98e2-4efb-a2d5-d27b04aae7ac")
+			(uuid "1412f284-0410-48ee-b917-20caf4adda92")
 		)
 		(instances
 			(project "Power"
@@ -11741,7 +11741,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a69093d3-c50d-4a27-8fe3-8135a25498be")
+		(uuid "4f29953b-3aed-4fde-b2ad-3542506566d6")
 		(property "Reference" "#PWR221"
 			(at 304.8 204.47 0)
 			(hide yes)
@@ -11797,7 +11797,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8be9b1dd-7e89-4220-aeb5-03adf4de2a0a")
+			(uuid "ce86e824-48ec-433e-8a34-5ce6d65739a8")
 		)
 		(instances
 			(project "Power"
@@ -11818,7 +11818,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8671de8b-d88b-4a88-a0ab-2d2175b82e1f")
+		(uuid "16312c96-25e2-426b-956e-fcd0d39cbc4a")
 		(property "Reference" "#PWR222"
 			(at 304.8 219.71 0)
 			(hide yes)
@@ -11874,7 +11874,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "64715443-3529-4644-bea7-7db672a36dd9")
+			(uuid "2b8c410a-94c4-4214-bc42-5835490de939")
 		)
 		(instances
 			(project "Power"

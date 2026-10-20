@@ -10,7 +10,7 @@ F19 Phase A, approach to the shunt R52.2. The thermistor A lines (+3.3V, U3+) ra
       the zones stay (E6 is pending).
     - The SW via of driver A (162.25, 103.75) moves to (161.75, 103.75), under its In1 run, to clear the +3.3V line.
     - 6 new node vias beside the pad R52.2 (chosen by cflow.via_gain after the rework, legal by cflow.legal_via).
-F20 Stitching vias VDC / GND / node C, 26 (see STITCH)."""
+F20 Stitching vias VDC / GND / node C, 26 (see STITCH); rev0.1-shift3 (STRIP_DY=3): 26, its own list."""
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); sys.dont_write_bytecode = True
 import pcbedit
@@ -61,6 +61,29 @@ STITCH = {                       # cflow_cases.py + cflow.best_vias, 5-6 per pat
     "GND_C_LS": ("GND", [(117.75, 72.0), (117.0, 72.5), (117.75, 74.25), (117.75, 73.0), (117.0, 73.75), (117.0, 71.5)]),
     "GND_A_LS": ("GND", [(152.5, 71.75)]),
 }
+DY = float(os.environ.get("STRIP_DY", "4"))   # rev0.1-shift3: the band above y 72 sits 4 - DY mm lower than on the +4 mm board
+if DY == 3:
+    # rev0.1-shift3 (bulk caps 3 mm from the block, shoulders fixed): 11 of the plus4 spots stay legal; the rest chosen anew
+    # by cflow.best_vias on the shift3 board and checked by refill + cflow_cases.py. VDC C gets none: its vias cut the GND
+    # planes at the GND C strip (VDC C -1 %, GND C +9 %). Copper, 100 A, without -> with the new ones: VDC C / B / A
+    # 0.365 / 0.354 / 0.578 -> 0.365 / 0.331 / 0.552 mOhm; GND C / B / A 0.321 / 0.179 / 0.195 -> 0.316 / 0.171 / 0.194.
+    STITCH = {
+        "node_C_LS": ("/Current_Sensor_3/Phase_IN", [(126.5, 102.75), (125.5, 103.0)]),
+        "VDC_C_HS": ("VDC", [(126.25, 71.0), (129.0, 68.75)]),
+        "VDC_B_HS": ("VDC", [(146.0, 68.75), (150.0, 68.75), (149.75, 74.25), (148.75, 74.25), (143.0, 70.5), (151.25, 75.0)]),
+        "VDC_A_HS": ("VDC", [(160.5, 68.75), (163.0, 74.5), (160.5, 71.0), (162.5, 71.0), (164.5, 70.75), (163.5, 70.75),
+                             (163.5, 69.75), (162.5, 70.0), (168.5, 73.5)]),
+        "GND_C_LS": ("GND", [(117.75, 74.25), (119.0, 74.25), (119.0, 77.25)]),
+        "GND_B_LS": ("GND", [(137.5, 74.5), (136.5, 74.25)]),
+        "GND_A_LS": ("GND", [(152.0, 74.25), (153.0, 74.25)]),
+    }
+    B.save(); import geom, cflow
+    G = geom.Board(fn); placed = []
+    for case, (net, pts) in STITCH.items():
+        for x, y in pts:
+            assert cflow.legal_via(G, net, x, y, others=placed), (case, x, y)
+            placed.append(dict(x=x, y=y, net=net, size=0.6, d=0.3))
+    B = pcbedit.Board(fn)
 for case, (net, pts) in STITCH.items():
     for x, y in pts: B.add_via((x, y), net, free=True)
 B.save()

@@ -22,12 +22,17 @@ def blocks(s):
         out.append((m.group(1), a, k + 1)); i = k + 1
     return out
 PT = re.compile(r'\((start|end|mid|center|xy|at) ([\d.\-]+) ([\d.\-]+)')
-def shift_pts(txt):
+import os
+YEDGE = float(os.environ.get("STRETCH_YEDGE", YCUT))   # own cut for Edge.Cuts: rev0.1-shift3 keeps the shoulders of the
+                                                       # board at the clamp plate screws (y 68-71.5) with the block
+def shift_pts(txt, ycut=None):
+    ycut = YCUT if ycut is None else ycut
     def f(m):
         x, y = float(m.group(2)), float(m.group(3))
-        if y < YCUT: y -= DY
+        if y < ycut: y -= DY
         return f"({m.group(1)} {m.group(2)} {fmt(y)}"
     return PT.sub(f, txt)
+def is_edge(t): return '(layer "Edge.Cuts")' in t
 cnt = {}; mixed = []
 res = []; last = 0
 for typ, a, b in blocks(s):
@@ -38,12 +43,13 @@ for typ, a, b in blocks(s):
             new = t[:m.start()] + f'\n\t\t(at {m.group(1)} {fmt(float(m.group(2)) - DY)}' + t[m.end():]
             cnt[typ] = cnt.get(typ, 0) + 1
     elif typ in ("segment", "gr_line", "gr_curve", "gr_poly", "gr_rect"):
-        new = shift_pts(t)
+        new = shift_pts(t, YEDGE if is_edge(t) else YCUT)
         if new != t: cnt[typ] = cnt.get(typ, 0) + 1
     elif typ in ("gr_arc", "gr_circle"):
+        yc = YEDGE if is_edge(t) else YCUT
         ys = [float(m.group(3)) for m in PT.finditer(t)]
-        if all(y < YCUT for y in ys): new = shift_pts(t); cnt[typ] = cnt.get(typ, 0) + 1
-        elif any(y < YCUT for y in ys): mixed.append(t[:200])
+        if all(y < yc for y in ys): new = shift_pts(t, yc); cnt[typ] = cnt.get(typ, 0) + 1
+        elif any(y < yc for y in ys): mixed.append(t[:200])
     elif typ == "zone":
         t2 = re.sub(r'\n\t\t\(filled_polygon.*?\n\t\t\)', '', t, flags=re.S)
         new = shift_pts(t2)

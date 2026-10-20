@@ -16,6 +16,8 @@ fn, T = sys.argv[1], sys.argv[2]
 U = json.load(open(os.path.join(T, "data", "sch_h_uuids.json")))
 YCAP_FP = "Capacitor_SMD:C_1812_4532Metric"
 H5_AT, C135_AT, C136_AT = (142.75, 35.5), (139.1, 40.7), (146.4, 40.7)
+DY = float(os.environ.get("STRIP_DY", "4"))       # rev0.1-shift3: the top (y < 72) sits 4 - DY mm lower; no F27
+H5_AT, C135_AT, C136_AT = [(x, y + 4 - DY) for x, y in (H5_AT, C135_AT, C136_AT)]
 RSN_FP, RSN_PN = "Resistor_SMD:R_0805_2012Metric", "Resistor SMD 0805 anti-surge 0.5W (ERJ-P06J1R0V)"
 PAIRS = (("R100", "R124", "LS"), ("R101", "R125", "LS"), ("R102", "R126", "LS"),
          ("R103", "R127", "HS"), ("R104", "R128", "HS"), ("R105", "R129", "HS"))
@@ -76,6 +78,8 @@ open(os.path.join(os.path.dirname(os.path.abspath(fn)), "Power.kicad_dru"), "w")
     '\t(constraint clearance (min 2.0mm)))\n')
 
 # ---------------------------------------------------------------- F27: snubber R 0612 -> 2 x 0805
+if DY != 4:
+    print(f"F26: H5 at {H5_AT}, C135 / C136 1812 DNP (strip {DY} mm: no F27)"); sys.exit(0)
 G = geom.Board(fn); place = {}
 for old, new, side in PAIRS:
     f = G.fps[old]; q = {p["name"]: p for p in f.placed()[0]}
