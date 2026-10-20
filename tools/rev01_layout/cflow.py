@@ -2,7 +2,10 @@
 - Copper of the net is rasterised per layer on a square grid h (zone fills, tracks, pads; THT pads on every layer):
   35 um copper, 0.49 mOhm per square between neighbouring cells.
 - Vias and drilled pads of the net are barrels between the layers where they meet copper of the net (plating 25 um,
-  heights from the board stack-up); the pad area on each layer is tied to the barrel.
+  heights from the board stack-up). On each layer the barrel is tied to the copper at its wall only, the cells within
+  r = drill/2 + plating (0.175 mm) - not to the whole pad: neighbouring vias of a field (0.5 mm pitch) must not short
+  each other through overlapping pads (review 11 P15; with pad discs the result fell with the grid, 0.394 / 0.323 /
+  0.196 mOhm at h 0.2 / 0.1 / 0.05). Via sizes are read from the board text (kpcb has no via size).
 - Terminals are pads (or areas) tied to one node; sources are fed through a series resistance each (R_ds of a
   transistor), sinks are held at 0 V.
 Used by cflow_cases.py; see there for the cases. Python API: Model(board, net, window, h).add_source/add_sink, solve()."""
@@ -10,7 +13,7 @@ import sys, math, os
 import numpy as np, scipy.sparse as sp, scipy.sparse.linalg as spla
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, "/home/alexey/Git/KiCad/InvertorPowerNewGen/bench_2026-10-13/tools"); sys.dont_write_bytecode = True
-import kpcb, geom
+import kpcb, geom, pcbedit
 from matplotlib.path import Path
 
 RHO, T, TPL = 1.72e-8, 35e-6, 25e-6                       # Ohm*m, copper and via plating thickness, m
@@ -28,6 +31,7 @@ class Model:
         self.xs = x0 + (np.arange(self.nx) + 0.5)*h; self.ys = y0 + (np.arange(self.ny) + 0.5)*h
         self.X, self.Y = np.meshgrid(self.xs, self.ys)
         self.mask = {l: np.zeros((self.ny, self.nx), bool) for l in LAYERS}
+        self.via_size = {(round(v["x"], 3), round(v["y"], 3), v["net"]): v["size"] for v in pcbedit.Board(fn).vias()}
         self._raster()
         self.padmask = {l: np.zeros((self.ny, self.nx), bool) for l in LAYERS}
         keep = self.mask; self.mask = self.padmask
@@ -94,13 +98,13 @@ class Model:
                         if self._touches(l, p["x"], p["y"], max(p["aw"], p["ah"])/2 + 0.15): self._capsule(l, p["x"], p["y"], p["x"], p["y"], min(p["aw"], p["ah"])/2)
                     else: self._rect(l, r)
                 if p["tht"] and p["drill"] > 0:
-                    self.barrels.append((p["x"], p["y"], p["drill"], min(p["aw"], p["ah"])/2, f"{f.ref}.{p['name']}"))
+                    self.barrels.append((p["x"], p["y"], p["drill"], p["drill"]/2 + TPL*1e3, f"{f.ref}.{p['name']}"))
         for v in self.K["vias"]:
             if v["net"] != net: continue
-            size = v.get("size", 0.6 if v["d"] >= 0.3 else 0.5)
+            size = self.via_size.get((round(v["x"], 3), round(v["y"], 3), v["net"]), 0.6 if v["d"] >= 0.3 else 0.5)
             for l in LAYERS:
                 if self._touches(l, v["x"], v["y"], size/2 + 0.15): self._capsule(l, v["x"], v["y"], v["x"], v["y"], size/2)
-            self.barrels.append((v["x"], v["y"], v["d"], size/2, "via"))
+            self.barrels.append((v["x"], v["y"], v["d"], v["d"]/2 + TPL*1e3, "via"))
 
     def _touches(self, l, x, y, r):
         j0, j1, i0, i1 = self._win_idx(x - r, y - r, x + r, y + r)
@@ -161,6 +165,9 @@ class Model:
             nodes = []
             for l in LAYERS:
                 cs = self.cells_in(l, (x, y, r))
+                if not cs and self.cells_in(l, (x, y, r + 0.75*self.h)):          # coarse grid: the nearest cell
+                    c = self.cells_in(l, (x, y, r + 0.75*self.h))
+                    cs = [min(c, key=lambda q: (self.xs[q[2]] - x)**2 + (self.ys[q[1]] - y)**2)]
                 if not cs: continue
                 vn = n; n += 1; ci = cidx(cs)
                 for c in ci: edge(vn, c, GBIG)
@@ -338,4 +345,19 @@ def add_vias(M, pts, size=0.6, drill=0.3):
     for x, y in pts:
         for l in LAYERS:
             if M._touches(l, x, y, size/2 + 0.15): M._capsule(l, x, y, x, y, size/2)
-        M.barrels.append((x, y, drill, size/2, "new"))
+        M.barrels.append((x, y, drill, drill/2 + TPL*1e3, "new"))
+
+def near_pad(M, rect, dist=2.0, ring=(0.2, 0.5), layer="B.Cu"):
+    """Copper loss (W) within `dist` of a pad rect (all layers) and the 99th percentile |J| (A/mm2) in a ring around
+    it on `layer` - the single-cell peak at the pad corner is singular and grows with the grid (review 11 P15)."""
+    def dmap():
+        dx = np.maximum(np.maximum(rect[0] - M.X, M.X - rect[2]), 0); dy = np.maximum(np.maximum(rect[1] - M.Y, M.Y - rect[3]), 0)
+        return np.hypot(dx, dy)
+    d = dmap(); loss = 0.0
+    for l in LAYERS:
+        for axis in (0, 1):
+            jj, ii, a, b = M.h_edges[l][axis]
+            sel = d[jj, ii] <= dist
+            loss += float((((M.V[a] - M.V[b])**2) * GSQ)[sel].sum())
+    J = M.density(layer); r = (d >= ring[0]) & (d <= ring[1]) & ~np.isnan(J)
+    return loss, float(np.percentile(J[r], 99)) if r.any() else float("nan")

@@ -12,6 +12,8 @@ import numpy as np, cflow, kpcb, geom
 fn, outdir = sys.argv[1], sys.argv[2]; only = set(sys.argv[3:])
 K = kpcb.load(fn); G = geom.Board(fn)
 RDS, I = 4.3e-3, 100.0
+# grid: node 0.05 mm, VDC / GND 0.1 mm - 0.1 -> 0.05 changes R by 2.5...5 % (review 11 P15)
+H_NODE, H_PLANE = float(os.environ.get("CFLOW_H", "0.05")), float(os.environ.get("CFLOW_HP", "0.1"))
 BULK = ["C4", "C6", "C10", "C11", "C12", "C15", "C18", "C22", "C23", "C24", "C25"]
 PH = {"C": dict(node="/Current_Sensor_3/Phase_IN", ls=("Q8", "Q4"), hs=("Q1", "Q7"), shunt=("R7", "1"), x=(116.25, 137.0)),
       "B": dict(node="/Current_Sensor_2/Phase_IN", ls=("Q9", "Q5"), hs=("Q2", "Q10"), shunt=("R9", "2"), x=(133.0, 152.0)),
@@ -30,8 +32,8 @@ def model(case):
     kind, ph, sw = case.split("_"); p = PH[ph]
     key = (kind, ph)
     if key not in _cache:
-        if kind == "node": _cache[key] = cflow.Model(fn, p["node"], (p["x"][0], 70.5, p["x"][1], 105.0), K=K, G=G)
-        else: _cache[key] = cflow.Model(fn, kind, (116.25, 31.5, 169.25, 92.5), h=0.15, K=K, G=G)
+        if kind == "node": _cache[key] = cflow.Model(fn, p["node"], (p["x"][0], 70.5, p["x"][1], 105.0), h=H_NODE, K=K, G=G)
+        else: _cache[key] = cflow.Model(fn, kind, (116.25, 31.5, 169.25, 92.5), h=H_PLANE, K=K, G=G)
     import copy
     M = copy.copy(_cache[key]); M.mask = {l: m.copy() for l, m in M.mask.items()}; M.sources, M.sinks = [], []
     return M

@@ -515,10 +515,9 @@
 					)
 				)
 			)
-			(pin no_connect line
+			(pin passive line
 				(at 2.54 -7.62 90)
 				(length 2.54)
-				(hide yes)
 				(name "NC"
 					(effects
 						(font

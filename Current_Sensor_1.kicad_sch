@@ -156,10 +156,9 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin passive line
 					(at 2.54 -7.62 90)
 					(length 2.54)
-					(hide yes)
 					(name "NC"
 						(effects
 							(font
@@ -1518,6 +1517,83 @@
 		(uuid "cb2fddc1-eb53-4ab7-9fb3-360876434adf")
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 146.05 116.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "388310a4-cbc5-4715-aab9-d62c004bf733")
+		(property "Reference" "#PWR218"
+			(at 146.05 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 146.05 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 146.05 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ba37289a-77ee-41de-aaa4-d4c2a4c4894e")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/7fdbfc1d-5268-45cc-9fe6-b01f44de85f0"
+					(reference "#PWR218")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 158.75 109.22 270)
 		(unit 1)
@@ -1662,7 +1738,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "15n"
 			(at 162.814 114.808 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -1,7 +1,10 @@
 """Before / after figures and table for the current-spreading report (cflow.py, cflow_cases.py).
 Usage: cflow_figs.py board_before board_after outdir
-- table.csv: copper resistance (mOhm) and peak |J| on B.Cu (A/mm2) at 100 A for every case, before and after;
-- fig_*.png: |J| maps, the same colour scale, row 1 before, row 2 after, with the vias (ring width ~ via current)."""
+- table.csv: copper resistance (mOhm) at 100 A for every case, before and after; for the node cases also the copper loss
+  within 2 mm of the shunt pad (W) and the 99th percentile |J| in the ring 0.2-0.5 mm around it on B.Cu (A/mm2) -
+  not the single-cell peak, which is singular at the pad corner and grows with the grid (review 11 P15);
+- fig_*.png: |J| maps, the same colour scale, row 1 before, row 2 after, with the vias (ring width ~ via current);
+  panel titles give the 99th percentile |J| of the panel."""
 import sys, os, io, contextlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); sys.dont_write_bytecode = True
 import numpy as np, matplotlib
@@ -23,17 +26,23 @@ LNAME = {"F.Cu": "F.Cu", "In1.Cu": "In1", "In2.Cu": "In2", "In3.Cu": "In3", "In4
 def solved(tag, case):
     g = E[tag]; M = g["build"](case); M.solve(g["I"]); return M
 
+def at_shunt(tag, case, M):
+    if not case.startswith("node"): return float("nan"), float("nan")
+    sh, pn = E[tag]["PH"][case.split("_")[1]]["shunt"]; p = [q for q in M.G.fps[sh].placed()[0] if q["name"] == pn][0]
+    return cflow.near_pad(M, (p["x"] - p["aw"]/2, p["y"] - p["ah"]/2, p["x"] + p["aw"]/2, p["y"] + p["ah"]/2))
+
 rows = []
 for case in [f"{k}_{ph}_{sw}" for ph in "CBA" for k, sw in (("node", "LS"), ("node", "HS"), ("VDC", "HS"), ("GND", "LS"))]:
     r = []
     for tag in ("до", "после"):
         M = solved(tag, case); rd = E[tag]["RDS"]
-        r += [(M.r_total() - rd/2)*1e3, float(np.nanmax(M.density("B.Cu")))]
+        r += [(M.r_total() - rd/2)*1e3, *at_shunt(tag, case, M)]
     rows.append((case, *r))
 with open(os.path.join(out, "table.csv"), "w") as f:
-    f.write("case,R_before_mOhm,Jmax_B_before,R_after_mOhm,Jmax_B_after\n")
-    for c, r0, j0, r1, j1 in rows: f.write(f"{c},{r0:.3f},{j0:.0f},{r1:.3f},{j1:.0f}\n")
-for c, r0, j0, r1, j1 in rows: print(f"{c:10s} {r0:.3f} -> {r1:.3f} mOhm ({(r1/r0-1)*100:+5.1f}%)   B.Cu peak {j0:5.0f} -> {j1:5.0f}")
+    f.write("case,R_before_mOhm,loss2mm_before_W,p99_before,R_after_mOhm,loss2mm_after_W,p99_after\n")
+    for c, r0, l0, j0, r1, l1, j1 in rows: f.write(f"{c},{r0:.3f},{l0:.2f},{j0:.0f},{r1:.3f},{l1:.2f},{j1:.0f}\n")
+for c, r0, l0, j0, r1, l1, j1 in rows:
+    print(f"{c:10s} {r0:.3f} -> {r1:.3f} mOhm ({(r1/r0-1)*100:+5.1f}%)   at the shunt {l0:.2f} -> {l1:.2f} W, p99 {j0:.0f} -> {j1:.0f}")
 
 def fig(name, case, layers, crop, title, vmax=500):
     Ms = {tag: solved(tag, case) for tag in ("до", "после")}
@@ -50,8 +59,8 @@ def fig(name, case, layers, crop, title, vmax=500):
                 tr = max((abs(i) for _, _, i in cur.get(k, [])), default=0)
                 ax.add_patch(Circle((bx, by), br, fc="none", ec="#36d6e7" if tr > 0.5 else "#8a8aa0", lw=0.5 + min(tr, 8)*0.25))
             ax.set_xlim(x0, x1); ax.set_ylim(y1, y0); ax.set_aspect("equal"); ax.tick_params(labelsize=6)
-            jm = np.nanmax(np.where((M.X >= x0) & (M.X <= x1) & (M.Y >= y0) & (M.Y <= y1), J, np.nan))
-            ax.set_title(f"{tag}: {LNAME[l]}, пик {jm:.0f} А/мм²", fontsize=8)
+            jm = np.nanpercentile(np.where((M.X >= x0) & (M.X <= x1) & (M.Y >= y0) & (M.Y <= y1), J, np.nan), 99)
+            ax.set_title(f"{tag}: {LNAME[l]}, 99 % клеток ≤ {jm:.0f} А/мм²", fontsize=8)
         axs[r][0].set_ylabel(f"{tag}: медь {(M.r_total() - rd/2)*1e3:.3f} мОм", fontsize=8)
     cb = fig.colorbar(im, ax=axs.ravel().tolist(), fraction=0.025, pad=0.02); cb.ax.tick_params(labelsize=6)
     cb.set_label("|J|, А/мм² при 100 А (35 мкм)", fontsize=7)
