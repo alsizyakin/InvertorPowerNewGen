@@ -289,8 +289,10 @@ def plot(M, out, layers=None, vmax=None, title="", marks=(), crop=None, extra=No
 
 def via_gain(M, I, d=0.3):
     """Where a new through via of the net would lower the resistance most: first order dR = -g*dV^2/I^2, g the
-    barrel between the outermost layers of the net copper at the spot. Returns a grid (uOhm, positive = gain)."""
-    Vl = {l: np.where(M.gidx[l] >= 0, M.V[np.maximum(M.gidx[l], 0)], np.nan) for l in LAYERS}
+    barrel between the outermost layers of the net copper at the spot. Returns a grid (uOhm, positive = gain).
+    Only live copper counts: an island cut off from the sink has no solved potential (V = 0), and taking that 0 as real
+    once showed 17 uOhm per via where a via only joins dead copper (GND A by the right slot, 2026-10-20)."""
+    Vl = {l: np.where((M.gidx[l] >= 0) & M.live[np.maximum(M.gidx[l], 0)], M.V[np.maximum(M.gidx[l], 0)], np.nan) for l in LAYERS}
     st = np.stack([Vl[l] for l in LAYERS]); zz = np.array([Z[l] for l in LAYERS])[:, None, None]
     have = ~np.isnan(st)
     vmax = np.nanmax(np.where(have, st, -np.inf), axis=0); vmin = np.nanmin(np.where(have, st, np.inf), axis=0)
