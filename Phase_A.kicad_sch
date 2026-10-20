@@ -1317,6 +1317,270 @@
 		(uuid "a3123cd9-3553-42e8-abef-9b3d090e3d30")
 	)
 	(symbol
+		(lib_id "Device:R_Small")
+		(at 140.97 113.03 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "1ae0746c-7749-43ae-9bae-37833555f80c")
+		(property "Reference" "R124"
+			(at 143.51 112.395 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1"
+			(at 143.51 114.935 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 140.97 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 0805 anti-surge 0.5W (ERJ-P06J1R0V)"
+			(at 140.97 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6d274f2b-4044-49b9-92d1-5c30156b69a6")
+		)
+		(pin "2"
+			(uuid "77f06bd9-f7d3-46ca-99e7-93500439355b")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f977a2eb-d10b-44d6-a07c-b8311dd9b73f"
+					(reference "R124")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/7176583c-694b-43e7-a08f-7dfec6a5a7f3"
+					(reference "R125")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/fe135066-9555-4a85-b389-3791e4e86e93"
+					(reference "R126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 110.49) (xy 140.97 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a529e61b-d7c1-4712-82c3-cf524ec3f30d")
+	)
+	(junction
+		(at 135.89 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d6cbc285-68d0-41f2-8e03-b6ed25e923df")
+	)
+	(wire
+		(pts
+			(xy 135.89 115.57) (xy 140.97 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c957ac34-bc7a-4027-a6d4-d3be1e8378b9")
+	)
+	(junction
+		(at 135.89 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "273927b1-e4c0-4024-9d8c-8596d9d15f14")
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 140.97 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "d8766afa-f8d2-44d2-b0f3-ae0b25c30920")
+		(property "Reference" "R127"
+			(at 143.51 80.645 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1"
+			(at 143.51 83.185 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 140.97 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 0805 anti-surge 0.5W (ERJ-P06J1R0V)"
+			(at 140.97 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "644865b2-5ccb-41ce-b878-621fda21c3b9")
+		)
+		(pin "2"
+			(uuid "b01301b0-fef1-4a82-8f79-5a25c72d8c29")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f977a2eb-d10b-44d6-a07c-b8311dd9b73f"
+					(reference "R127")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/7176583c-694b-43e7-a08f-7dfec6a5a7f3"
+					(reference "R128")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/fe135066-9555-4a85-b389-3791e4e86e93"
+					(reference "R129")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 135.89 78.74) (xy 140.97 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa417771-9f0a-44a6-bfe4-781256170fdb")
+	)
+	(junction
+		(at 135.89 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "842c8549-a12e-4349-96fa-189beadef26e")
+	)
+	(wire
+		(pts
+			(xy 135.89 83.82) (xy 140.97 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e727f454-283a-46f5-8bd4-ae9bae702017")
+	)
+	(junction
+		(at 135.89 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "04a08c58-1015-4cba-82a7-ab1892311498")
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 120.65 137.16 0)
 		(unit 1)
@@ -2403,7 +2667,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.47"
+		(property "Value" "1"
 			(at 137.795 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2414,7 +2678,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0612_1632Metric_Pad1.18x3.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 135.89 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -2447,7 +2711,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Resistor SMD 0612 1.5W"
+		(property "Description P/N" "Resistor SMD 0805 anti-surge 0.5W (ERJ-P06J1R0V)"
 			(at 135.89 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -2679,7 +2943,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.47"
+		(property "Value" "1"
 			(at 137.795 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2690,7 +2954,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0612_1632Metric_Pad1.18x3.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 135.89 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -2723,7 +2987,7 @@
 				)
 			)
 		)
-		(property "Description P/N" "Resistor SMD 0612 1.5W"
+		(property "Description P/N" "Resistor SMD 0805 anti-surge 0.5W (ERJ-P06J1R0V)"
 			(at 135.89 113.03 0)
 			(hide yes)
 			(show_name no)
