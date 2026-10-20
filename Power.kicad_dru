@@ -1,0 +1,4 @@
+(version 1)
+(rule "CHASSIS 2 mm"
+	(condition "A.NetName == '/CHASSIS'")
+	(constraint clearance (min 2.0mm)))

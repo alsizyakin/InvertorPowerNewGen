@@ -10,7 +10,7 @@ PH={'3':'C','2':'B','1':'A'}
 HSG={'C100':'C','C101':'C','C104':'B','C105':'B','C108':'A','C109':'A'}
 def dom(n):
     if n=='' : return None
-    if n=='VDC': return ('VDC',)
+    if n in ('VDC', '/VDC_J6'): return ('VDC',)         # /VDC_J6: VDC after the fuse F1 (lay_P4g.py)
     if n=='GND': return ('GND',)
     m=re.match(r'/Current_Sensor_(\d)/Phase_(IN|OUT)',n)
     if m: return ('node',PH[m.group(1)])

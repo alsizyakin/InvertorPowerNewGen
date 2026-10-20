@@ -13,7 +13,9 @@
 # 10. lay_P4e.py       E6: dead-end node copper of phases A and C to GND, GND vias
 # 11. sch_rev01_g.py   reviews 11/13: C134 100n at J6, C37/C39/C64 15n, R50 DNP, U4/U9/U12 pin 4 to GND (schematic)
 # 12. lay_P4f.py       the same on the board (C134 on B.Cu at J6, pad 4 links)
-# 13. kicad-cli        refill zones, save, DRC with schematic parity (run_drc.sh on a copy, then copy the board back)
+# 13. sch_rev01_h.py   owner after round 3: fuse F1 VDC -> VDC_J6 (J6, C134, R68); H5 CHASSIS + C135 / C136 Y (DNP)
+# 14. lay_P4g.py       the same on the board: F1 2410 on B.Cu at the bulk caps, H5 between J4 / J5, Power.kicad_dru
+# 15. kicad-cli        refill zones, save, DRC with schematic parity (run_drc.sh on a copy, then copy the board back)
 set -e
 P=$(cd "$1" && pwd); T=$(cd "$(dirname "$0")" && pwd); TMP=$(mktemp -d)
 python3 -B "$T/stretch.py" "$P/Power.kicad_pcb" "$TMP/s1.kicad_pcb" 72 4
@@ -28,4 +30,6 @@ python3 -B "$T/lay_P4d.py" "$P/Power.kicad_pcb"
 python3 -B "$T/lay_P4e.py" "$P/Power.kicad_pcb"
 python3 -B "$T/sch_rev01_g.py" "$P" "$T"
 python3 -B "$T/lay_P4f.py" "$P/Power.kicad_pcb" "$T"
+python3 -B "$T/sch_rev01_h.py" "$P" "$T"
+python3 -B "$T/lay_P4g.py" "$P/Power.kicad_pcb" "$T"
 rm -rf "$TMP"
