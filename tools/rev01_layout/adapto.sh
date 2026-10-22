@@ -6,10 +6,13 @@
 #  2. fp_y.py        footprints MountingHole_3.2mm_M3_Slot_CHS and Fuse_2410_1206 -> Lib/Power_My.pretty, fp-lib-table
 #  3. sch_rev01_j.py out H5 / C135 / C136; Y block CY1 CY2 FY1 RY1 RY2 TP2 TP3, H2 = H_CHS; netclass Y_CHASSIS, rules
 #  4. lay_Y1.py      the board part of step 3
-#  5. kicad-cli      refill zones, save, DRC with schematic parity (run_drc.sh), then y_checks.py
+#  5. lay_MC1.py     (second commit) the MCU-zone tab 3 mm shorter: bottom edge 141.5 -> 138.5, 53 x 98 mm; the 18 bottom-row
+#                    parts moved and rerouted (data/mc1.json, made in tmp/2026-10-22_mc)
+#  6. kicad-cli      refill zones, save, DRC with schematic parity (run_drc.sh), then y_checks.py
 set -e
 P=$(cd "$1" && pwd); T=$(cd "$(dirname "$0")" && pwd)
 python3 -B "$T/lay_AD1.py" "$P/Power.kicad_pcb"
 python3 -B "$T/fp_y.py" "$P"
 python3 -B "$T/sch_rev01_j.py" "$P" "$T"
 python3 -B "$T/lay_Y1.py" "$P/Power.kicad_pcb" "$T"
+python3 -B "$T/lay_MC1.py" "$P/Power.kicad_pcb" "$T"

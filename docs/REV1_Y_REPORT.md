@@ -1,7 +1,8 @@
 # Y-цепь корпуса: отчёт по `docs/Y_TASK.md`
 
-Ветка `rev0.1-adapto`, 2026-10-22. Плата в габарите MINICONTROLLER_ADAPTO, 53 × 101 мм (вариант V1: верхняя зона
-ADAPTO на 3 мм выше, полоса снабберов сохранена). Скрипты: `tools/rev01_layout/adapto.sh` (шаги `lay_AD1.py`,
+Ветка `rev0.1-adapto`, 2026-10-22. Верх и ширина платы как в MINICONTROLLER_ADAPTO (вариант V1: верхняя зона ADAPTO на
+3 мм выше, полоса снабберов сохранена). Плата была 53 × 101 мм, после сжатия зоны МК стала 53 × 98 мм (`lay_MC1.py`; на
+Y-цепь это не повлияло). Скрипты: `tools/rev01_layout/adapto.sh` (шаги `lay_AD1.py`,
 `fp_y.py`, `sch_rev01_j.py`, `lay_Y1.py`), проверки — `tools/rev01_layout/y_checks.py`.
 
 ## 1. Что сделано
