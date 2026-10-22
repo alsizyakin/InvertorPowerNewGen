@@ -106,6 +106,8 @@ class Board:
             f = FP(s[a:b]); self.fps[f.ref] = f
         K = kpcb.load(path)
         self.vias = K["vias"]; self.segs = K["segs"]
+        for v, node in zip(self.vias, kpcb.find(K["root"], "via")):    # real via sizes (kpcb reads only the drill;
+            v["size"] = float(kpcb.first(node, "size")[1])             # check_items took 0.6 for every 0.3 drill)
         xs = []
         for a, b in _blocks(s, "gr_line"):
             g = s[a:b]
