@@ -3,4 +3,5 @@
   (lib (name "MOSFET_MY")(type "KiCad")(uri "${KIPRJMOD}/Lib/MOSFET_MY.pretty")(options "")(descr ""))
   (lib (name "Connector_My")(type "KiCad")(uri "${KIPRJMOD}/Lib/Connector_My.pretty")(options "")(descr ""))
   (lib (name "Bush_Power")(type "KiCad")(uri "${KIPRJMOD}/Lib/Bush_Power.pretty")(options "")(descr ""))
+  (lib (name "Power_My")(type "KiCad")(uri "${KIPRJMOD}/Lib/Power_My.pretty")(options "")(descr "Y circuit"))
 )

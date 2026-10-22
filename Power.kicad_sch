@@ -223,6 +223,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:TestPoint_2Pole"
 			(pin_names
 				(offset 0.762)
@@ -2149,6 +2272,159 @@
 				)
 				(pin passive line
 					(at 0 -2.54 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Fuse_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse_Small"
+				(at 0 1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fuse, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fuse_Small_0_1"
+				(rectangle
+					(start -1.27 0.508)
+					(end 1.27 -0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_Small_1_1"
+				(pin passive line
+					(at -2.54 0 0)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 0 180)
 					(length 1.27)
 					(name ""
 						(effects
@@ -6315,12 +6591,6 @@
 		(uuid "227f75b1-bfd4-4e65-bee6-ab8516fc2aa4")
 	)
 	(junction
-		(at 373.38 222.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "25de2be3-46c3-42f5-8a2f-eafeb2d55cee")
-	)
-	(junction
 		(at 408.94 297.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7154,16 +7424,6 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 222.25) (xy 381 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e18ef79-9ca2-4259-b80f-b8164b4dff87")
-	)
-	(wire
-		(pts
 			(xy 294.64 195.58) (xy 309.88 195.58)
 		)
 		(stroke
@@ -7221,16 +7481,6 @@
 			(type default)
 		)
 		(uuid "10929654-d86c-4a5a-a610-c60ada8936e8")
-	)
-	(wire
-		(pts
-			(xy 381 217.17) (xy 381 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10b46ed2-131a-44c5-8f87-abc893d93aa9")
 	)
 	(wire
 		(pts
@@ -8401,16 +8651,6 @@
 			(type default)
 		)
 		(uuid "5b3b9c46-ebe9-4d82-93c7-9c3b07ee660e")
-	)
-	(wire
-		(pts
-			(xy 365.76 217.17) (xy 365.76 222.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b893f04-3fcc-482b-a0bb-73ec9f00981b")
 	)
 	(wire
 		(pts
@@ -11052,16 +11292,6 @@
 		)
 		(uuid "7ac6f9ce-d293-492e-8a5d-4d2fa3687fc3")
 	)
-	(label "CHASSIS"
-		(at 367.03 222.25 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7cbbd19c-c072-419e-a72c-c7e49edca459")
-	)
 	(label "EEPROM_MOSI_MCU"
 		(at 347.98 369.57 0)
 		(effects
@@ -11529,6 +11759,1361 @@
 				(justify right)
 			)
 		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 441.96 243.84 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f074345d-b297-4746-8f36-cfcbebd3d634")
+		(property "Reference" "H2"
+			(at 444.5 241.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "H_CHS"
+			(at 444.5 243.205 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Power_My:MountingHole_3.2mm_M3_Slot_CHS"
+			(at 441.96 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 441.96 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 441.96 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d590095-0d47-4fbc-883e-c2d49e0f6d87")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 452.12 246.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fe8f4e4f-5eb2-49a5-b7b1-ef37974e9695")
+		(property "Reference" "TP2"
+			(at 453.39 241.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP_CHS"
+			(at 453.39 243.205 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 452.12 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 452.12 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 452.12 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a1435a9-e006-410d-80da-216e6e108f5e")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 464.82 248.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "33a740ad-48c9-4f59-a09b-5ccfb3cfd85a")
+		(property "Reference" "CY1"
+			(at 462.28 248.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "470n 250V X7R"
+			(at 462.28 250.825 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Capacitor SMD 1812 470nF 250V X7R soft termination"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "C1812X474KARACAUTO"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Replacement" "CGA8N3X7R2E474K230KE; GCJ43DR72E474KXJ1L"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C1812X474KARACAUTO"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alt_MPN" "CGA8N3X7R2E474K230KE; GCJ43DR72E474KXJ1L"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "soft termination, 250 V - не заменять на 100 V"
+			(at 464.82 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f334c119-805c-4498-bb30-1e1a22c801ff")
+		)
+		(pin "2"
+			(uuid "c5e40af9-6488-4e14-82c8-a53e8f3341be")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "CY1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 464.82 254 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "05d1eba2-c21d-4cc5-b83e-b0e94115d1fb")
+		(property "Reference" "CY2"
+			(at 462.28 253.365 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "470n 250V X7R"
+			(at 462.28 255.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Capacitor SMD 1812 470nF 250V X7R soft termination"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "C1812X474KARACAUTO"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Replacement" "CGA8N3X7R2E474K230KE; GCJ43DR72E474KXJ1L"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "C1812X474KARACAUTO"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alt_MPN" "CGA8N3X7R2E474K230KE; GCJ43DR72E474KXJ1L"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "soft termination, 250 V - не заменять на 100 V"
+			(at 464.82 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c30b0bd4-1960-4fda-b749-d94ba0460f6e")
+		)
+		(pin "2"
+			(uuid "03538e50-06fd-4b6e-92db-1e998be94612")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "CY2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse_Small")
+		(at 464.82 259.08 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9fabbaae-21d9-4b4c-b38a-eec8966499aa")
+		(property "Reference" "FY1"
+			(at 460.375 257.81 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "2A 125VDC"
+			(at 455.93 260.35 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Power_My:Fuse_2410_1206"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Fuse SMD 2410 2A fast 125V DC / 0R 1206"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "0453002.MR"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Replacement" "0451002.MRL"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "0453002.MR"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alt_MPN" "0451002.MRL"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "двойной отказ CY при плюсе на раме; 125 V DC: 50 A, до 75 V DC: 10 kA; 63 V DC мало для 73 V"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Variant" "Стенд: 0R 1206 (RC1206JR-070RL); Серия: предохранитель 2410 2A >= 125V DC (0453002.MR)"
+			(at 464.82 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "75b4f983-e698-4e0b-ba7d-f13ddb00d9e1")
+		)
+		(pin "2"
+			(uuid "ee75430e-1ca9-4ecd-890a-3a47b2f3e963")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "FY1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 487.68 248.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "219a33a1-6a13-4088-ae42-1f80344c3dda")
+		(property "Reference" "RY1"
+			(at 490.22 248.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 490.22 250.825 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 0805 100k 5% 150V"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "RC0805JR-07100KL"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Replacement" "ERJ-6GEYJ104V"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-07100KL"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alt_MPN" "ERJ-6GEYJ104V"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "2 x 100k последовательно: делят напряжение и импульс ESD"
+			(at 487.68 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "13654926-a0eb-47b4-9a30-a41bce939edf")
+		)
+		(pin "2"
+			(uuid "9662a41e-384b-40f7-b63d-b818a37ebb24")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "RY1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 487.68 254 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8768c26c-b577-4fd3-9c9b-45eef09bbdf4")
+		(property "Reference" "RY2"
+			(at 490.22 253.365 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 490.22 255.905 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 0805 100k 5% 150V"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "RC0805JR-07100KL"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Replacement" "ERJ-6GEYJ104V"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "RC0805JR-07100KL"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Alt_MPN" "ERJ-6GEYJ104V"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" "2 x 100k последовательно: делят напряжение и импульс ESD"
+			(at 487.68 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "610e904b-3239-48ed-a646-56d65e85cbf1")
+		)
+		(pin "2"
+			(uuid "dcd292e4-23ba-4819-8775-8c7406be41d4")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "RY2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 464.82 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7dc172e0-8083-4cfc-ae41-e454ad6c7e32")
+		(property "Reference" "#PWR226"
+			(at 464.82 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 464.82 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 464.82 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 464.82 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 464.82 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "97af3eb0-62ed-4be2-b3c4-bf2f32f2ec80")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "#PWR226")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 487.68 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d276d148-bd66-4dd4-805b-923e27305782")
+		(property "Reference" "#PWR227"
+			(at 487.68 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 487.68 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 487.68 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 487.68 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 487.68 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "924ce053-508d-4fe9-bb72-871951367500")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "#PWR227")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 487.68 256.54) (xy 487.68 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc30a17d-6e11-4774-b0c0-fe719aac7538")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 497.84 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b964c253-21cc-40ef-a4df-3d3cd9c5a3ed")
+		(property "Reference" "TP3"
+			(at 499.11 256.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP_GND"
+			(at 499.11 258.445 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+			(at 497.84 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 497.84 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 497.84 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7c44cdb0-932b-4ebd-a705-07da3ee04b5d")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 497.84 261.62 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c90d4ef8-22d1-4bd2-bf1e-a0492e959638")
+		(property "Reference" "#PWR228"
+			(at 497.84 267.97 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 497.84 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 497.84 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 497.84 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 497.84 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3dcf69ce-934b-4dfa-b31c-56ef5f9dec70")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
+					(reference "#PWR228")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 441.96 246.38) (xy 452.12 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "323048e7-b54f-4231-88a6-04da1836d573")
+	)
+	(wire
+		(pts
+			(xy 452.12 246.38) (xy 464.82 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3510501-09c5-46de-a968-6e0e5f47d0f3")
+	)
+	(wire
+		(pts
+			(xy 464.82 246.38) (xy 487.68 246.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0952748c-f867-431e-83a0-57fd212349b0")
+	)
+	(label "CHASSIS"
+		(at 453.39 246.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c903fa42-8fb0-40d3-9681-d34aa5cecd87")
+	)
+	(wire
+		(pts
+			(xy 464.82 251.46) (xy 469.9 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdd1ea33-bbd6-465f-aaf2-a0cdf5a3663b")
+	)
+	(label "CY_MID"
+		(at 466.09 251.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5ee2bcf9-c137-4917-9116-5d1ca6643c10")
+	)
+	(wire
+		(pts
+			(xy 464.82 256.54) (xy 469.9 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9bb6dab-cc48-417c-9cee-751b627731a9")
+	)
+	(label "Y_F"
+		(at 466.09 256.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6cd5486c-5fee-4d59-96ea-1a7c4e845325")
+	)
+	(wire
+		(pts
+			(xy 487.68 251.46) (xy 500.38 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5367732-6ca7-45a4-beda-a5ddf563e63f")
+	)
+	(label "RY_MID"
+		(at 496.57 251.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5b0e2c9-aff2-416e-8817-90aa81338a1d")
+	)
+	(rectangle
+		(start 431.8 236.22)
+		(end 576.58 279.4)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "b17aee8b-f6c2-481b-be35-d27004710be3")
+	)
+	(text "Y-цепь корпуса"
+		(exclude_from_sim no)
+		(at 431.8 232.41 0)
+		(effects
+			(font
+				(size 2.5 2.5)
+				(thickness 0.4)
+				(bold yes)
+			)
+			(justify left top)
+		)
+		(uuid "9e97dda0-6667-40e8-9d17-d899091d3095")
+	)
+	(text "Минус ЗПТ - радиатор (корпус), docs/Y_TASK.md:\nвозврат синфазного тока коротким путём, потенциал корпуса\nбез связи по постоянному току, путь ESD.\nОдна цепь от минуса: вторую цепь от +DC не ставить.\nH2 - винт в радиатор, кольцо CHASSIS (шайба зубчатая\nили пружинная); H1, H3, H4 - без меди под шайбой.\nCY1, CY2: 250 V, soft termination - не заменять на 100 V.\nRY1, RY2 - мимо FY1: при сгоревшем FY1 корпус\nостаётся привязан к минусу.\nFY1: стенд - 0R 1206, серия - предохранитель\n2 A >= 125 V DC (2410)."
+		(exclude_from_sim no)
+		(at 510.54 240.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "5ff5e5f0-f506-4e67-b8be-4e2e8df139bc")
 	)
 	(symbol
 		(lib_id "Device:C_Small")
@@ -14681,82 +16266,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 36.83 67.31 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "22f885c3-08ae-4526-98de-a17fcafe3e94")
-		(property "Reference" "H2"
-			(at 39.37 66.04 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 39.37 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 36.83 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 36.83 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 36.83 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
-					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "power:GND")
 		(at 414.02 212.09 0)
@@ -24433,83 +25943,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:VDC")
-		(at 365.76 212.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "932cccf9-f6d2-43f3-8628-39a5a72c851b")
-		(property "Reference" "#PWR223"
-			(at 365.76 208.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VDC"
-			(at 365.76 208.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 365.76 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 365.76 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 365.76 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c90bb138-ae9d-4bee-a6bc-45284823f2e2")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
-					(reference "#PWR223")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "Device:R_Small")
 		(at 405.13 204.47 0)
@@ -24636,98 +26070,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 381 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "934f3b55-0f59-45fb-a14e-d27fcb06b954")
-		(property "Reference" "C136"
-			(at 383.54 213.995 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7n Y2"
-			(at 383.54 216.535 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
-			(at 381 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 381 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 381 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Capacitor SMD 1812 Y2 (or X7R 2kV)"
-			(at 381 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b7ff724b-bd17-4c25-9f17-631ea2caada3")
-		)
-		(pin "2"
-			(uuid "0ae3e57b-8890-43b2-917d-489b88283d76")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
-					(reference "C136")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "Device:C_Small")
 		(at 337.82 363.22 0)
@@ -32136,84 +33479,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 373.38 219.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eedef0a6-55dd-4068-9e78-f0beba96d019")
-		(property "Reference" "H5"
-			(at 375.92 217.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 375.92 219.075 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3_Pad_Via"
-			(at 373.38 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 373.38 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 373.38 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "855fa4f3-e153-4479-9e95-403a6199aa81")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
-					(reference "H5")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "power:GND")
 		(at 518.16 299.72 180)
@@ -32505,98 +33771,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 365.76 214.63 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "f8f22195-3321-485f-9c92-8bce0166b330")
-		(property "Reference" "C135"
-			(at 368.3 213.995 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "4.7n Y2"
-			(at 368.3 216.535 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
-			(at 365.76 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 365.76 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 365.76 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Capacitor SMD 1812 Y2 (or X7R 2kV)"
-			(at 365.76 214.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "308ed35d-7b70-43bd-994b-1a0a6f1040d6")
-		)
-		(pin "2"
-			(uuid "b45d5fb0-2cd4-4a9f-a759-7da65118ede1")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
-					(reference "C135")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(symbol
 		(lib_id "Device:R_Small")
 		(at 363.22 311.15 0)
@@ -33079,83 +34254,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 381 212.09 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ffd78cab-4722-4c58-9f75-c1f095150022")
-		(property "Reference" "#PWR224"
-			(at 381 205.74 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 381 208.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 381 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 381 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 381 212.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6615466b-2d3e-4a4b-ab0a-983f2b1ba0a0")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0"
-					(reference "#PWR224")
-					(unit 1)
-				)
-			)
-		)
-	)
+
 	(sheet
 		(at 154.94 157.48)
 		(size 25.4 17.78)

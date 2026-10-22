@@ -7,6 +7,7 @@ import re, uuid
 import pcbedit
 
 LIBDIR = "/usr/share/kicad/footprints"
+PROJECT_LIBS = {}                      # library nickname -> .pretty dir of a project library (lay_Y1.py: Power_My)
 
 def _span(s, ref): return pcbedit._fp_span(s, ref)
 
@@ -40,7 +41,7 @@ def clone_fp(s, src_ref, new_ref, path, sheetname=None, value=None, pad_nets=Non
 
 def _lib_body(lib_id):
     lib, name = lib_id.split(":")
-    t = open(f"{LIBDIR}/{lib}.pretty/{name}.kicad_mod", encoding="utf-8").read()
+    t = open(f"{PROJECT_LIBS.get(lib, f'{LIBDIR}/{lib}.pretty')}/{name}.kicad_mod", encoding="utf-8").read()
     descr = re.search(r'\n\t\(descr "([^"]*)"\)', t).group(1); tags = re.search(r'\n\t\(tags "([^"]*)"\)', t).group(1)
     items = []
     for a, b in _blocks(t, "\t"):
@@ -74,7 +75,7 @@ def swap_geometry(s, ref, lib_id):
     new = []
     for it in items:
         if it.startswith("(pad"):
-            pn = re.match(r'\(pad "([^"]+)"', it).group(1)
+            pn = re.match(r'\(pad "([^"]*)"', it).group(1)
             if pn in nets:
                 it = it.replace("\n\t\t\t(uuid", f'\n\t\t\t(net "{nets[pn]}")\n\t\t\t(pintype "passive")\n\t\t\t(uuid', 1)
         new.append("\t\t" + it)

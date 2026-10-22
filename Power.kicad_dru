@@ -1,4 +1,11 @@
 (version 1)
-(rule "CHASSIS 2 mm"
-	(condition "A.NetName == '/CHASSIS'")
+# Y circuit, docs/Y_TASK.md 4.5 (the CHASSIS 2 mm rule of H5 is gone with H5)
+(rule "Y_CHASSIS 0.5 mm"
+	(condition "A.NetClass == 'Y_CHASSIS'")
+	(constraint clearance (min 0.5mm)))
+(rule "Y_CHASSIS 0.8 mm to VDC and phase nodes"
+	(condition "A.NetClass == 'Y_CHASSIS' && (B.NetName == 'VDC' || B.NetName == '/Driver_*/SW' || B.NetName == '/Current_Sensor_*/Phase_*')")
+	(constraint clearance (min 0.8mm)))
+(rule "CHASSIS, CY_MID 2 mm to phase nodes"
+	(condition "(A.NetName == '/CHASSIS' || A.NetName == '/CY_MID') && (B.NetName == '/Driver_*/SW' || B.NetName == '/Current_Sensor_*/Phase_*')")
 	(constraint clearance (min 2.0mm)))
