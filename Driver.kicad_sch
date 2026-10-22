@@ -1303,16 +1303,52 @@
 		(uuid "3a9e696d-a056-444b-a2d2-926c2317bfb7")
 	)
 	(junction
+		(at 128.27 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4f0411cb-4c68-46ac-8ccc-1494d1fcdab3")
+	)
+	(junction
+		(at 184.15 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f2baef8-3e1b-4c41-8975-6a7d03b84af5")
+	)
+	(junction
 		(at 154.94 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8516e386-8902-4255-836e-8c38b03d3e90")
 	)
 	(junction
+		(at 184.15 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b91cf884-a35d-4cbc-8101-36ad2ced8b8e")
+	)
+	(junction
+		(at 128.27 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c4853a61-3dfa-4b34-9087-2f6df34479c4")
+	)
+	(junction
 		(at 154.94 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c8523c15-b24e-42e4-8145-76656a06a4b4")
+	)
+	(junction
+		(at 196.85 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d3839f05-384a-46d3-97d6-01163bb5c6fa")
+	)
+	(junction
+		(at 196.85 113.03)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea087759-e048-4d8e-936a-cf91ff2cde36")
 	)
 	(wire
 		(pts
@@ -1326,6 +1362,26 @@
 	)
 	(wire
 		(pts
+			(xy 189.23 113.03) (xy 196.85 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a79db3c-45f8-422f-836e-844ade720ad5")
+	)
+	(wire
+		(pts
+			(xy 176.53 107.95) (xy 176.53 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1106fa4a-91b2-4738-948a-6be4bd079440")
+	)
+	(wire
+		(pts
 			(xy 151.13 100.33) (xy 154.94 100.33)
 		)
 		(stroke
@@ -1336,6 +1392,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 96.52) (xy 118.11 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1829c5db-e18f-4937-a3d6-a95cfa08682f")
+	)
+	(wire
+		(pts
 			(xy 139.7 88.9) (xy 142.24 88.9)
 		)
 		(stroke
@@ -1343,6 +1409,76 @@
 			(type default)
 		)
 		(uuid "354a85c8-8518-4b72-83b7-9829b1385566")
+	)
+	(wire
+		(pts
+			(xy 105.41 100.33) (xy 107.95 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ff25a1d-8f67-4edd-aaba-657901ae545d")
+	)
+	(wire
+		(pts
+			(xy 189.23 104.14) (xy 196.85 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b319713-4589-4161-b09c-b65dc983e330")
+	)
+	(wire
+		(pts
+			(xy 184.15 113.03) (xy 184.15 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4be53fed-9105-4601-9c82-750723f723cc")
+	)
+	(wire
+		(pts
+			(xy 196.85 96.52) (xy 196.85 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e5e4cf2-b92b-489b-97b4-bb9419231eb1")
+	)
+	(wire
+		(pts
+			(xy 176.53 113.03) (xy 184.15 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "515362eb-53bd-4e6e-9d61-8e79290fd6d5")
+	)
+	(wire
+		(pts
+			(xy 196.85 104.14) (xy 204.47 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "560941ae-9ce3-4a67-a851-07a8bfa51bb7")
+	)
+	(wire
+		(pts
+			(xy 184.15 104.14) (xy 184.15 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57d3399e-e9a8-485d-9e24-87ebff873d2c")
 	)
 	(wire
 		(pts
@@ -1376,6 +1512,46 @@
 	)
 	(wire
 		(pts
+			(xy 151.13 104.14) (xy 184.15 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "621dbe12-4b69-4e3c-b83a-adbbff587cd2")
+	)
+	(wire
+		(pts
+			(xy 196.85 120.65) (xy 196.85 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6adb64d2-8790-4646-bb30-ff9d593421f7")
+	)
+	(wire
+		(pts
+			(xy 184.15 96.52) (xy 191.77 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cdcaa80-6e4a-4678-b458-80c028cae11a")
+	)
+	(wire
+		(pts
+			(xy 184.15 120.65) (xy 191.77 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72170b59-d21e-4d02-9cc7-8c4192a87054")
+	)
+	(wire
+		(pts
 			(xy 129.54 88.9) (xy 134.62 88.9)
 		)
 		(stroke
@@ -1403,6 +1579,16 @@
 			(type default)
 		)
 		(uuid "960839d9-f539-4503-aaf7-b27253a4bdd5")
+	)
+	(wire
+		(pts
+			(xy 151.13 107.95) (xy 176.53 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97432864-7b0a-4fbb-bbac-b3d5b9889211")
 	)
 	(wire
 		(pts
@@ -1436,6 +1622,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 100.33) (xy 167.64 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d163d3e4-2721-4fca-8931-5ed61773e80c")
+	)
+	(wire
+		(pts
 			(xy 128.27 100.33) (xy 133.35 100.33)
 		)
 		(stroke
@@ -1456,6 +1652,26 @@
 	)
 	(wire
 		(pts
+			(xy 196.85 113.03) (xy 204.47 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0f4a553-4294-42ba-bd34-c52985d0c73f")
+	)
+	(wire
+		(pts
+			(xy 123.19 96.52) (xy 128.27 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e320f86d-341d-4b59-8822-8c20487f7ae2")
+	)
+	(wire
+		(pts
 			(xy 154.94 95.25) (xy 151.13 95.25)
 		)
 		(stroke
@@ -1463,6 +1679,46 @@
 			(type default)
 		)
 		(uuid "edfb9a4d-2a5a-4580-8330-6b41deaa58fe")
+	)
+	(wire
+		(pts
+			(xy 113.03 100.33) (xy 128.27 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f41a533a-3faf-48bc-8f99-22464b6800bd")
+	)
+	(label "LO_DRV"
+		(at 163.83 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "032362be-35f5-45f8-86af-a7e48baa1c45")
+	)
+	(label "SW"
+		(at 156.21 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2d9d9003-c903-48c7-8b59-e11cd3904716")
+	)
+	(label "HO_DRV"
+		(at 163.83 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9180a467-35c7-4105-af14-c81874b763f6")
 	)
 	(hierarchical_label "HO"
 		(shape output)
@@ -1528,1352 +1784,6 @@
 			(justify left)
 		)
 		(uuid "f44d3407-d1bc-4e3f-ae60-e98ebc17ea21")
-	)
-	(wire
-		(pts
-			(xy 151.13 104.14) (xy 184.15 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "621dbe12-4b69-4e3c-b83a-adbbff587cd2")
-	)
-	(label "HO_DRV"
-		(at 163.83 104.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9180a467-35c7-4105-af14-c81874b763f6")
-	)
-	(wire
-		(pts
-			(xy 184.15 96.52) (xy 189.23 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cdcaa80-6e4a-4678-b458-80c028cae11a")
-	)
-	(wire
-		(pts
-			(xy 184.15 120.65) (xy 189.23 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72170b59-d21e-4d02-9cc7-8c4192a87054")
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 186.69 104.14 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2b0a77d8-3ef8-411c-88e3-33be1a0f4a16")
-		(property "Reference" "R106"
-			(at 186.69 102.235 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0.82"
-			(at 186.69 106.045 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Resistor SMD 1%"
-			(at 186.69 104.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8096806d-5741-4a72-901e-044d85eb6640")
-		)
-		(pin "2"
-			(uuid "2d7b49a8-ae4b-471f-923c-c4a7a19d5f42")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "R106")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "R107")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "R108")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 189.23 104.14) (xy 196.85 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4b319713-4589-4161-b09c-b65dc983e330")
-	)
-	(wire
-		(pts
-			(xy 196.85 104.14) (xy 204.47 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "560941ae-9ce3-4a67-a851-07a8bfa51bb7")
-	)
-	(junction
-		(at 196.85 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d3839f05-384a-46d3-97d6-01163bb5c6fa")
-	)
-	(junction
-		(at 184.15 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f2baef8-3e1b-4c41-8975-6a7d03b84af5")
-	)
-	(wire
-		(pts
-			(xy 184.15 104.14) (xy 184.15 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57d3399e-e9a8-485d-9e24-87ebff873d2c")
-	)
-
-	(wire
-		(pts
-			(xy 189.23 96.52) (xy 191.77 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f34d72f0-b79d-418f-aede-093120e9d3f1")
-	)
-	(symbol
-		(lib_id "Device:D_Schottky_Small")
-		(at 194.31 96.52 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "96e2e63d-9ecc-4f0c-9fae-299bf383988c")
-		(property "Reference" "D30"
-			(at 194.31 93.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PMEG4010BEA"
-			(at 194.31 99.06 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 194.31 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 194.31 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Schottky Diode"
-			(at 194.31 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Product Name" "PMEG4010BEA"
-			(at 194.31 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8c30f6fd-cf51-4b6d-9711-96c22fa876c8")
-		)
-		(pin "2"
-			(uuid "333abc72-5409-4f4c-8bb0-384b3d2f2543")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "D30")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "D31")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "D32")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 196.85 96.52) (xy 196.85 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e5e4cf2-b92b-489b-97b4-bb9419231eb1")
-	)
-	(wire
-		(pts
-			(xy 151.13 107.95) (xy 176.53 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97432864-7b0a-4fbb-bbac-b3d5b9889211")
-	)
-	(wire
-		(pts
-			(xy 176.53 107.95) (xy 176.53 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1106fa4a-91b2-4738-948a-6be4bd079440")
-	)
-	(wire
-		(pts
-			(xy 176.53 113.03) (xy 184.15 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "515362eb-53bd-4e6e-9d61-8e79290fd6d5")
-	)
-	(label "LO_DRV"
-		(at 163.83 107.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "032362be-35f5-45f8-86af-a7e48baa1c45")
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 186.69 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "86da0edf-75fe-4b66-8189-42a9c4df2db0")
-		(property "Reference" "R112"
-			(at 186.69 111.125 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0.82"
-			(at 186.69 114.935 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 186.69 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Resistor SMD 1%"
-			(at 186.69 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "da255844-dc59-4547-86e7-2f3d8f17a54c")
-		)
-		(pin "2"
-			(uuid "853e9044-7eb6-407a-bc12-9479e9e4a0e1")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "R112")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "R113")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "R114")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 189.23 113.03) (xy 196.85 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a79db3c-45f8-422f-836e-844ade720ad5")
-	)
-	(wire
-		(pts
-			(xy 196.85 113.03) (xy 204.47 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0f4a553-4294-42ba-bd34-c52985d0c73f")
-	)
-	(junction
-		(at 196.85 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ea087759-e048-4d8e-936a-cf91ff2cde36")
-	)
-	(junction
-		(at 184.15 113.03)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b91cf884-a35d-4cbc-8101-36ad2ced8b8e")
-	)
-	(wire
-		(pts
-			(xy 184.15 113.03) (xy 184.15 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4be53fed-9105-4601-9c82-750723f723cc")
-	)
-
-	(wire
-		(pts
-			(xy 189.23 120.65) (xy 191.77 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4604e81-cc62-4fd2-8414-6b5da94f82d6")
-	)
-	(symbol
-		(lib_id "Device:D_Schottky_Small")
-		(at 194.31 120.65 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "e9d4aacd-373a-44b7-a874-24c5be31350b")
-		(property "Reference" "D33"
-			(at 194.31 118.11 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PMEG4010BEA"
-			(at 194.31 123.19 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 194.31 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 194.31 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 194.31 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Schottky Diode"
-			(at 194.31 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Product Name" "PMEG4010BEA"
-			(at 194.31 120.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "18bdde01-0f63-455d-8dc3-41dd9555b7b6")
-		)
-		(pin "2"
-			(uuid "df98a459-737b-44ef-8b9b-a9b02ed8545a")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "D33")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "D34")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "D35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 196.85 120.65) (xy 196.85 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6adb64d2-8790-4646-bb30-ff9d593421f7")
-	)
-	(label "SW"
-		(at 156.21 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2d9d9003-c903-48c7-8b59-e11cd3904716")
-	)
-	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 162.56 100.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2fcc16b8-9f75-43fa-8727-76aaa2e8b7a8")
-		(property "Reference" "NT1"
-			(at 162.56 98.425 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 162.56 102.235 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 162.56 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 162.56 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 162.56 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f1fde0fd-8275-4c30-8d3a-55eeda0604a3")
-		)
-		(pin "2"
-			(uuid "3be99584-347d-4203-87d9-2de950792f56")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "NT1")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "NT2")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "NT3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 165.1 100.33) (xy 167.64 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d163d3e4-2721-4fca-8931-5ed61773e80c")
-	)
-	(wire
-		(pts
-			(xy 105.41 96.52) (xy 118.11 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1829c5db-e18f-4937-a3d6-a95cfa08682f")
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 120.65 96.52 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ad1a475a-81de-4e60-bb07-6192489b1007")
-		(property "Reference" "R118"
-			(at 120.65 94.615 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 120.65 98.425 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 120.65 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 120.65 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 120.65 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Resistor SMD 1%"
-			(at 120.65 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f321bd1e-8f73-443e-8fd7-fbc76a55790c")
-		)
-		(pin "2"
-			(uuid "cdcda4f9-5bf7-41bb-9173-8ed950d620ba")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "R118")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "R119")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "R120")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 123.19 96.52) (xy 128.27 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e320f86d-341d-4b59-8822-8c20487f7ae2")
-	)
-	(junction
-		(at 128.27 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4f0411cb-4c68-46ac-8ccc-1494d1fcdab3")
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 128.27 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "157b2f9d-036b-41cb-96b5-6b8498f02941")
-		(property "Reference" "C118"
-			(at 126.365 93.345 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100p"
-			(at 126.365 95.25 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 128.27 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Capacitor SMD 50V"
-			(at 128.27 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e8536519-ee40-4e2c-bdaa-0469e406725e")
-		)
-		(pin "2"
-			(uuid "b79aef24-c1fe-497a-bd15-cc5dbfcb1199")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "C118")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "C119")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "C120")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 128.27 91.44 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2ceea386-95bf-48b2-99e5-a0fcc5681171")
-		(property "Reference" "#PWR200"
-			(at 128.27 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 128.27 87.52 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c115016c-e757-45ce-989c-9a93f4444866")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "#PWR200")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "#PWR201")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "#PWR202")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 105.41 100.33) (xy 107.95 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ff25a1d-8f67-4edd-aaba-657901ae545d")
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 110.49 100.33 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3a3f7d81-8fef-4352-8aba-7ddac5d37dc2")
-		(property "Reference" "R121"
-			(at 110.49 98.425 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 110.49 102.235 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 110.49 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 110.49 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Resistor SMD 1%"
-			(at 110.49 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "58093bd1-9359-4656-868c-d83b8a227a35")
-		)
-		(pin "2"
-			(uuid "250add75-b39d-4ea5-a5d2-6a2fad81757b")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "R121")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "R122")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "R123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 113.03 100.33) (xy 128.27 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f41a533a-3faf-48bc-8f99-22464b6800bd")
-	)
-	(junction
-		(at 128.27 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c4853a61-3dfa-4b34-9087-2f6df34479c4")
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 128.27 102.87 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "82745831-c369-48fd-a3ed-ba777d302d6e")
-		(property "Reference" "C121"
-			(at 126.365 102.235 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100p"
-			(at 126.365 104.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
-			(at 128.27 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description P/N" "Capacitor SMD 50V"
-			(at 128.27 102.87 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9d0cb9e6-811d-4ae3-9d45-e3d07ba6f20e")
-		)
-		(pin "2"
-			(uuid "7f817fbc-49f4-4764-96c8-0b0f270513ca")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "C121")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "C122")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "C123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 128.27 105.41 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9e8a20ae-829b-4125-ad1c-d3e851443baa")
-		(property "Reference" "#PWR203"
-			(at 128.27 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 128.27 109.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 128.27 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 128.27 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f15edab7-4039-4251-b1eb-c14a8816071a")
-		)
-		(instances
-			(project "Power"
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
-					(reference "#PWR203")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
-					(reference "#PWR204")
-					(unit 1)
-				)
-				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
-					(reference "#PWR205")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:D_Small")
@@ -3002,6 +1912,475 @@
 				)
 				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 128.27 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "157b2f9d-036b-41cb-96b5-6b8498f02941")
+		(property "Reference" "C118"
+			(at 126.365 93.345 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100p"
+			(at 126.365 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 128.27 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Capacitor SMD 50V"
+			(at 128.27 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e8536519-ee40-4e2c-bdaa-0469e406725e")
+		)
+		(pin "2"
+			(uuid "b79aef24-c1fe-497a-bd15-cc5dbfcb1199")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "C119")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "C118")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "C120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 186.69 104.14 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2b0a77d8-3ef8-411c-88e3-33be1a0f4a16")
+		(property "Reference" "R106"
+			(at 186.69 102.235 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.82"
+			(at 186.69 106.045 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 186.69 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 1%"
+			(at 186.69 104.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8096806d-5741-4a72-901e-044d85eb6640")
+		)
+		(pin "2"
+			(uuid "2d7b49a8-ae4b-471f-923c-c4a7a19d5f42")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "R107")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "R106")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "R108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 128.27 91.44 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2ceea386-95bf-48b2-99e5-a0fcc5681171")
+		(property "Reference" "#PWR200"
+			(at 128.27 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 128.27 87.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c115016c-e757-45ce-989c-9a93f4444866")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "#PWR201")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "#PWR200")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "#PWR202")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:NetTie_2")
+		(at 162.56 100.33 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2fcc16b8-9f75-43fa-8727-76aaa2e8b7a8")
+		(property "Reference" "NT1"
+			(at 162.56 98.425 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NetTie_2"
+			(at 162.56 102.235 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
+			(at 162.56 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f1fde0fd-8275-4c30-8d3a-55eeda0604a3")
+		)
+		(pin "2"
+			(uuid "3be99584-347d-4203-87d9-2de950792f56")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "NT2")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "NT1")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "NT3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 110.49 100.33 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a3f7d81-8fef-4352-8aba-7ddac5d37dc2")
+		(property "Reference" "R121"
+			(at 110.49 98.425 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 110.49 102.235 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 110.49 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 1%"
+			(at 110.49 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "58093bd1-9359-4656-868c-d83b8a227a35")
+		)
+		(pin "2"
+			(uuid "250add75-b39d-4ea5-a5d2-6a2fad81757b")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "R122")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "R121")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "R123")
 					(unit 1)
 				)
 			)
@@ -3188,6 +2567,496 @@
 				)
 				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
 					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 128.27 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "82745831-c369-48fd-a3ed-ba777d302d6e")
+		(property "Reference" "C121"
+			(at 126.365 102.235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100p"
+			(at 126.365 104.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 128.27 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Capacitor SMD 50V"
+			(at 128.27 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9d0cb9e6-811d-4ae3-9d45-e3d07ba6f20e")
+		)
+		(pin "2"
+			(uuid "7f817fbc-49f4-4764-96c8-0b0f270513ca")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "C122")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "C121")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "C123")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 186.69 113.03 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "86da0edf-75fe-4b66-8189-42a9c4df2db0")
+		(property "Reference" "R112"
+			(at 186.69 111.125 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0.82"
+			(at 186.69 114.935 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 186.69 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 1%"
+			(at 186.69 113.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "da255844-dc59-4547-86e7-2f3d8f17a54c")
+		)
+		(pin "2"
+			(uuid "853e9044-7eb6-407a-bc12-9479e9e4a0e1")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "R113")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "R112")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "R114")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky_Small")
+		(at 194.31 96.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "96e2e63d-9ecc-4f0c-9fae-299bf383988c")
+		(property "Reference" "D30"
+			(at 194.31 93.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PMEG4010BEA"
+			(at 194.31 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 194.31 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Schottky Diode"
+			(at 194.31 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "PMEG4010BEA"
+			(at 194.31 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c30f6fd-cf51-4b6d-9711-96c22fa876c8")
+		)
+		(pin "2"
+			(uuid "333abc72-5409-4f4c-8bb0-384b3d2f2543")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "D31")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "D30")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "D32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 128.27 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9e8a20ae-829b-4125-ad1c-d3e851443baa")
+		(property "Reference" "#PWR203"
+			(at 128.27 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 128.27 109.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f15edab7-4039-4251-b1eb-c14a8816071a")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "#PWR204")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "#PWR203")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "#PWR205")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 120.65 96.52 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ad1a475a-81de-4e60-bb07-6192489b1007")
+		(property "Reference" "R118"
+			(at 120.65 94.615 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 120.65 98.425 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Resistor SMD 1%"
+			(at 120.65 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f321bd1e-8f73-443e-8fd7-fbc76a55790c")
+		)
+		(pin "2"
+			(uuid "cdcda4f9-5bf7-41bb-9173-8ed950d620ba")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "R119")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "R118")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "R120")
 					(unit 1)
 				)
 			)
@@ -3486,6 +3355,115 @@
 				)
 				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
 					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky_Small")
+		(at 194.31 120.65 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "e9d4aacd-373a-44b7-a874-24c5be31350b")
+		(property "Reference" "D33"
+			(at 194.31 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PMEG4010BEA"
+			(at 194.31 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 194.31 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 194.31 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 194.31 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description P/N" "Schottky Diode"
+			(at 194.31 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Product Name" "PMEG4010BEA"
+			(at 194.31 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "18bdde01-0f63-455d-8dc3-41dd9555b7b6")
+		)
+		(pin "2"
+			(uuid "df98a459-737b-44ef-8b9b-a9b02ed8545a")
+		)
+		(instances
+			(project "Power"
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/47ea5ea6-75b2-417d-becc-0c7b63ba572f"
+					(reference "D34")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/a8d734bd-b043-4b16-b834-36ede11366f7"
+					(reference "D33")
+					(unit 1)
+				)
+				(path "/7ff38f8b-11c9-43a1-8b76-b5e8c8de18e0/f6f48504-43ae-4516-9932-88fd69aadde3"
+					(reference "D35")
 					(unit 1)
 				)
 			)
